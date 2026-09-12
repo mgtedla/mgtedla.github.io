@@ -3,152 +3,423 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Mebrahtu G. Tedla | Immunology Research</title>
-  <meta name="description" content="Academic website of Mebrahtu G. Tedla, featuring research in immunology, translational science, systems biology, and computational approaches.">
+
+  <meta name="description"
+        content="Academic website of Mebrahtu G. Tedla, an immunology researcher integrating experimental, translational, systems, and computational approaches.">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #f7f7f7;
+      font-family: Arial, Helvetica, sans-serif;
       color: #222;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #ffffff;
-      padding: 50px 20px;
-      text-align: center;
-      border-bottom: 1px solid #ddd;
-    }
-
-    header h1 {
-      margin-bottom: 10px;
-      font-size: 38px;
-    }
-
-    header p {
-      font-size: 18px;
-      color: #555;
+      background: #f5f7f9;
+      line-height: 1.7;
     }
 
     nav {
-      background: #222;
-      padding: 14px;
-      text-align: center;
+      background: #ffffff;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    nav a {
-      color: white;
+    .nav-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .site-name {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .nav-links a {
+      margin-left: 22px;
       text-decoration: none;
-      margin: 0 15px;
+      color: #222;
+      font-size: 15px;
     }
 
-    nav a:hover {
+    .nav-links a:hover {
       text-decoration: underline;
     }
 
-    main {
-      max-width: 950px;
+    .hero {
+      background: white;
+      padding: 80px 24px 65px;
+    }
+
+    .hero-container {
+      max-width: 1000px;
       margin: auto;
-      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .profile-photo {
+      width: 230px;
+      height: 230px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #eee;
+    }
+
+    .photo-placeholder {
+      width: 230px;
+      height: 230px;
+      border-radius: 50%;
+      background: #e9ecef;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #777;
+      border: 5px solid #eee;
+    }
+
+    .hero h1 {
+      font-size: 44px;
+      margin: 0 0 8px;
+    }
+
+    .hero-title {
+      font-size: 19px;
+      color: #555;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      font-size: 17px;
+      max-width: 700px;
+    }
+
+    .buttons {
+      margin-top: 25px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 18px;
+      margin: 5px 8px 5px 0;
+      border: 1px solid #222;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #222;
+      background: white;
+    }
+
+    .button:hover {
+      background: #222;
+      color: white;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 45px 24px;
     }
 
     section {
-      background: white;
-      padding: 30px;
-      margin-bottom: 25px;
-      border-radius: 8px;
+      margin-bottom: 60px;
     }
 
     h2 {
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 8px;
+      font-size: 30px;
+      margin-bottom: 18px;
+    }
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 8px;
+      border: 1px solid #e3e3e3;
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .project {
+      background: white;
+      padding: 25px;
+      margin-bottom: 20px;
+      border-left: 4px solid #555;
+      border-radius: 5px;
     }
 
     footer {
+      background: #222;
+      color: #ddd;
       text-align: center;
-      padding: 25px;
-      color: #666;
+      padding: 30px 20px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: white;
+    }
+
+    @media (max-width: 750px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .photo-placeholder,
+      .profile-photo {
+        margin: auto;
+      }
+
+      .research-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-container {
+        justify-content: center;
+      }
+
+      .nav-links {
+        margin-top: 10px;
+      }
+
+      .nav-links a {
+        margin: 0 8px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Mebrahtu G. Tedla</h1>
-  <p>Immunologist | Translational & Systems Immunology | Computational Biology | Precision Medicine</p>
-</header>
-
 <nav>
-  <a href="#about">About</a>
-  <a href="#research">Research</a>
-  <a href="#projects">Projects</a>
-  <a href="#publications">Publications</a>
-  <a href="#skills">Skills</a>
-  <a href="#contact">Contact</a>
+  <div class="nav-container">
+    <div class="site-name">Mebrahtu G. Tedla</div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#research">Research</a>
+      <a href="#projects">Projects</a>
+      <a href="#publications">Publications</a>
+      <a href="cv.html">CV</a>
+      <a href="blog.html">Blog</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
 </nav>
+
+
+<section class="hero">
+  <div class="hero-container">
+
+    <div class="photo-placeholder">
+      Add profile<br>photo here
+    </div>
+
+    <div>
+      <h1>Mebrahtu G. Tedla</h1>
+
+      <div class="hero-title">
+        Immunologist | Translational & Systems Immunology |
+        Computational Biology | Precision Medicine
+      </div>
+
+      <p>
+        I am an immunology researcher interested in understanding
+        immune dysregulation, loss of immune tolerance, and mechanisms
+        underlying autoimmune disease progression.
+      </p>
+
+      <p>
+        My research integrates experimental immunology, animal models,
+        flow cytometry, immunometabolism, transcriptomics, and computational
+        approaches to investigate disease mechanisms and identify
+        translational biomarkers.
+      </p>
+
+      <div class="buttons">
+        <a class="button" href="#research">Research</a>
+        <a class="button" href="cv.html">View CV</a>
+        <a class="button" href="blog.html">Scientific Blog</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
 <main>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>
-    I am an immunology researcher interested in understanding mechanisms of immune dysregulation,
-    autoimmune disease progression, and immune tolerance. My work integrates experimental immunology,
-    animal models, flow cytometry, transcriptomics, and computational approaches.
-  </p>
-</section>
-
 <section id="research">
   <h2>Research Interests</h2>
-  <p>
-    My research interests include Type 1 diabetes, B-cell biology, immune tolerance,
-    immunometabolism, translational immunology, systems immunology, and precision medicine.
-  </p>
+
+  <div class="research-grid">
+
+    <div class="card">
+      <h3>Autoimmunity & Type 1 Diabetes</h3>
+      <p>
+        Investigating mechanisms that contribute to immune tolerance loss
+        and progression of autoimmune diabetes.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>B-cell Biology</h3>
+      <p>
+        Studying B-cell development, activation, tolerance checkpoints,
+        and their contribution to autoimmune disease.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Immunometabolism</h3>
+      <p>
+        Exploring how metabolic reprogramming influences immune-cell
+        phenotype, activation, and function.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Systems & Computational Immunology</h3>
+      <p>
+        Applying transcriptomics, single-cell analysis, bioinformatics,
+        and integrative computational approaches to immunological questions.
+      </p>
+    </div>
+
+  </div>
 </section>
+
 
 <section id="projects">
-  <h2>Research Projects</h2>
+  <h2>Selected Research Projects</h2>
 
-  <h3>Type I Interferon and B-cell Immunometabolism</h3>
-  <p>
-    Investigating how Type I interferon signaling influences B-cell metabolism,
-    immune tolerance, and progression of autoimmune diabetes.
-  </p>
+  <div class="project">
+    <h3>Type I Interferon and B-cell Immunometabolism</h3>
+    <p>
+      Investigating how Type I interferon signaling alters B-cell metabolism,
+      immune activation, and tolerance during the development of Type 1 diabetes.
+    </p>
+  </div>
 
-  <h3>B-cell Transcriptomics</h3>
-  <p>
-    Applying RNA sequencing and computational approaches to identify transcriptional
-    programs associated with B-cell dysfunction and autoimmune disease progression.
-  </p>
+  <div class="project">
+    <h3>B-cell Transcriptional Signatures</h3>
+    <p>
+      Using RNA sequencing and computational analysis to identify B-cell
+      transcriptional programs and molecular pathways associated with
+      autoimmune disease progression.
+    </p>
+  </div>
+
+  <div class="project">
+    <h3>Immune Biomarker Discovery</h3>
+    <p>
+      Exploring immune, transcriptomic, and metabolic signatures that may help
+      identify early disease changes and support precision medicine approaches.
+    </p>
+  </div>
+
 </section>
+
 
 <section id="publications">
-  <h2>Publications</h2>
-  <p>Selected publications will be listed here.</p>
-</section>
+  <h2>Selected Publications</h2>
 
-<section id="skills">
-  <h2>Research & Computational Skills</h2>
   <p>
-    Flow Cytometry | Immunometabolism | Mouse Models | Cell Culture |
-    R | Python | RNA-seq | DESeq2 | Single-cell RNA-seq | Seurat | Scanpy |
-    Data Visualization | Bioinformatics
+    Selected peer-reviewed publications will be added here.
+  </p>
+
+  <p>
+    A complete publication list can also be linked to Google Scholar,
+    PubMed, or ORCID.
   </p>
 </section>
+
+
+<section>
+  <h2>Experimental & Computational Expertise</h2>
+
+  <div class="research-grid">
+
+    <div class="card">
+      <h3>Experimental</h3>
+      <p>
+        Flow cytometry<br>
+        Immune phenotyping<br>
+        B-cell biology<br>
+        Immunometabolism<br>
+        Cell culture<br>
+        Mouse models<br>
+        Molecular and cellular assays
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Computational</h3>
+      <p>
+        R & Python<br>
+        RNA-seq<br>
+        DESeq2<br>
+        Single-cell RNA-seq<br>
+        Seurat & Scanpy<br>
+        Data visualization<br>
+        Bioinformatics & statistical analysis
+      </p>
+    </div>
+
+  </div>
+</section>
+
 
 <section id="contact">
   <h2>Contact</h2>
-  <p>Email: your-email@example.com</p>
-  <p>GitHub: github.com/mgtedla</p>
+
+  <p>
+    Email: your-email@example.com
+  </p>
+
+  <p>
+    GitHub:
+    <a href="https://github.com/mgtedla">
+      github.com/mgtedla
+    </a>
+  </p>
+
+  <p>
+    LinkedIn | Google Scholar | ORCID
+  </p>
+
 </section>
 
 </main>
 
+
 <footer>
   <p>© 2026 Mebrahtu G. Tedla</p>
+  <p>Academic Research Website</p>
 </footer>
 
 </body>
