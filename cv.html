@@ -1,25 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8"><nav>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>CV | Mebrahtu G. Tedla</title>
-  <meta name="description" content="Curriculum vitae of Mebrahtu G. Tedla, immunology researcher.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * { box-sizing: border-box; }
+<title>Curriculum Vitae | Mebrahtu G. Tedla</title>
+
+<meta name="description"
+content="Curriculum Vitae of Mebrahtu G. Tedla, immunology researcher with interests in translational immunology, systems immunology, autoimmunity, immunometabolism, and computational approaches.">
+
+<style>
+
+/* =========================
+   COLOR PALETTE
+========================= */
+
+:root {
+  --primary: #123B5D;
+  --secondary: #1F7A8C;
+  --accent: #2A9D8F;
+  --light-bg: #F4F8FB;
+  --text: #222222;
+  --border: #D9E2E8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  color: #222222;
-  background: #F4F8FB;
+  color: var(--text);
+  background: var(--light-bg);
   line-height: 1.7;
 }
 
+
+/* =========================
+   NAVIGATION
+========================= */
+
 nav {
-  background: #123B5D;
+  background: var(--primary);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -28,19 +57,15 @@ nav {
 .nav-container {
   max-width: 1500px;
   margin: auto;
-  padding: 16px 30px;
+  padding: 14px 30px;
 }
 
-
-    .nav-links a {
-      margin-left: 22px;
-      text-decoration: none;
-      .nav-links {
+.nav-links {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 18px;
 }
 
 .nav-links a {
@@ -49,351 +74,556 @@ nav {
   padding: 8px 12px;
   border-radius: 6px;
   white-space: nowrap;
-  transition: background 0.25s ease;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
 }
 
 .nav-links a:hover {
-  background: #1F7A8C;
+  background: var(--secondary);
+  color: white;
+  transform: translateY(-1px);
 }
-      .cv-header {
+
+
+/* =========================
+   CV HEADER
+========================= */
+
+.cv-header {
   background: white;
   text-align: center;
-  padding: 65px 20px 50px;
+  padding: 65px 20px 55px;
+  border-bottom: 1px solid var(--border);
 }
-    .cv-header h1 {
-      font-size: 42px;
-      margin-bottom: 5px;
-    }
 
-    .cv-header p {
-      font-size: 18px;
-      color: #555;
-    }
+.cv-header h1 {
+  color: var(--primary);
+  font-size: 46px;
+  margin: 0 0 12px;
+}
 
-    .download-button {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
-      border: 1px solid #222;
-      border-radius: 5px;
-      text-decoration: none;
-      color: #222;
-    }
+.cv-header .name {
+  font-size: 24px;
+  color: #444;
+  margin: 0 0 12px;
+}
 
-    .download-button:hover {
-      background: #222;
-      color: white;
-    }
+.cv-header .specialization {
+  font-size: 18px;
+  color: #555;
+  margin: 0 auto 25px;
+  max-width: 1000px;
+}
 
-    main {
-      max-width: 900px;
-      margin: auto;
-      padding: 45px 24px;
-    }
+.download-button {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  padding: 11px 22px;
+  border-radius: 6px;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
 
-    .cv-section {
-      background: white;
-      padding: 30px;
-      margin-bottom: 25px;
-      border-radius: 7px;
-      border: 1px solid #e2e2e2;
-    }
+.download-button:hover {
+  background: var(--secondary);
+  transform: translateY(-2px);
+}
 
-    h2 {
-      margin-top: 0;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 8px;
-    }
 
-    .item {
-      margin-bottom: 22px;
-    }
+/* =========================
+   MAIN CV CONTENT
+========================= */
 
-    .item h3 {
-      margin-bottom: 2px;
-    }
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 55px 24px 70px;
+}
 
-    .date {
-      color: #666;
-      font-size: 14px;
-    }
+.cv-section {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 30px 34px;
+  margin-bottom: 25px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
 
-    .skills {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 25px;
-    }
+.cv-section:hover {
+  transform: translateY(-3px);
+  border-color: var(--secondary);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+}
 
-    footer {
-      background: #222;
-      color: #ddd;
-      text-align: center;
-      padding: 30px;
-      margin-top: 40px;
-    }
+.cv-section h2 {
+  color: var(--primary);
+  font-size: 27px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
 
-    @media (max-width: 700px) {
-      .skills {
-        grid-template-columns: 1fr;
-      }
+.cv-section h2::after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 3px;
+  background: var(--secondary);
+  margin-top: 8px;
+}
 
-      .nav-container {
-        justify-content: center;
-      }
+.cv-section h3 {
+  color: var(--primary);
+  margin-bottom: 5px;
+}
 
-      .nav-links {
-        margin-top: 10px;
-      }
+.cv-section p {
+  margin-top: 5px;
+}
 
-      .nav-links a {
-        margin: 0 7px;
-      }
-    }
-  </style>
+.cv-section ul {
+  padding-left: 22px;
+}
+
+.cv-section li {
+  margin-bottom: 7px;
+}
+
+
+/* =========================
+   EXPERTISE GRID
+========================= */
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.expertise-box {
+  background: var(--light-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 22px;
+}
+
+.expertise-box h3 {
+  margin-top: 0;
+  color: var(--secondary);
+}
+
+
+/* =========================
+   PROFILE LINKS
+========================= */
+
+.profile-links a {
+  color: var(--secondary);
+  text-decoration: none;
+  margin-right: 18px;
+  font-weight: 600;
+}
+
+.profile-links a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: var(--primary);
+  color: #E4EDF2;
+  text-align: center;
+  padding: 28px 20px;
+}
+
+footer p {
+  margin: 4px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 950px) {
+
+  .nav-links {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .nav-container {
+    padding: 12px 15px;
+  }
+
+  .nav-links {
+    gap: 5px;
+  }
+
+  .nav-links a {
+    padding: 6px 8px;
+    font-size: 14px;
+  }
+
+  .cv-header {
+    padding: 45px 18px;
+  }
+
+  .cv-header h1 {
+    font-size: 36px;
+  }
+
+  main {
+    padding: 35px 15px 50px;
+  }
+
+  .cv-section {
+    padding: 24px 20px;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  * {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
 <nav>
+
   <div class="nav-container">
 
     <div class="nav-links">
+
       <a href="index.html">Home</a>
+
       <a href="index.html#research">Research</a>
+
       <a href="index.html#projects">Projects</a>
+
       <a href="index.html#publications">Publications</a>
+
       <a href="visual-immunology.html">Visual Immunology</a>
+
       <a href="gallery.html">Gallery</a>
+
       <a href="cv.html">CV</a>
+
       <a href="blog.html">Blog</a>
+
       <a href="index.html#contact">Contact</a>
+
     </div>
 
   </div>
+
 </nav>
 
 
-<div class="cv-header">
+<!-- =========================
+     CV HEADER
+========================= -->
+
+<header class="cv-header">
 
   <h1>Curriculum Vitae</h1>
 
-  <p>
+  <p class="name">
     Mebrahtu G. Tedla
   </p>
 
-  <p>
-    Immunology | Translational & Systems Immunology |
+  <p class="specialization">
+    Immunology | Translational &amp; Systems Immunology |
     Computational Approaches | Precision Medicine
   </p>
 
-  <!-- We will activate this after uploading your PDF CV -->
   <a class="download-button" href="#">
     Download Full CV
   </a>
 
-</div>
+</header>
 
+
+<!-- =========================
+     MAIN CONTENT
+========================= -->
 
 <main>
 
-  <section class="cv-section">
-    <h2>Professional Profile</h2>
 
-    <p>
-      Immunology researcher with experience investigating immune-system
-      regulation and disease mechanisms using experimental and translational
-      approaches. Research interests include autoimmunity, B-cell biology,
-      immune tolerance, immunometabolism, Type 1 diabetes, systems immunology,
-      and the application of computational approaches to biological questions.
-    </p>
-  </section>
+<!-- PROFESSIONAL PROFILE -->
 
+<section class="cv-section">
 
-  <section class="cv-section">
-    <h2>Education</h2>
+  <h2>Professional Profile</h2>
 
-    <div class="item">
-      <h3>Doctoral Degree</h3>
-      <p>University / Institution</p>
-      <p class="date">Year</p>
-    </div>
+  <p>
+    Immunology researcher with experience investigating immune-system
+    regulation and disease mechanisms using experimental and translational
+    approaches. Research interests include autoimmunity, B-cell biology,
+    immune tolerance, immunometabolism, Type 1 diabetes, systems immunology,
+    and the application of computational approaches to biological questions.
+  </p>
 
-    <div class="item">
-      <h3>Previous Degree</h3>
-      <p>University / Institution</p>
-      <p class="date">Year</p>
-    </div>
-
-  </section>
+</section>
 
 
-  <section class="cv-section">
-    <h2>Research Experience</h2>
+<!-- EDUCATION -->
 
-    <div class="item">
-      <h3>Postdoctoral Research</h3>
+<section class="cv-section">
 
-      <p>
-        Research focused on mechanisms of immune dysregulation,
-        B-cell tolerance, immunometabolism, and Type 1 diabetes.
-      </p>
-    </div>
+  <h2>Education</h2>
 
-    <div class="item">
-      <h3>Previous Research Experience</h3>
+  <p>
+    Educational background and academic training will be listed here.
+  </p>
 
-      <p>
-        Add previous research positions and major scientific
-        contributions here.
-      </p>
-    </div>
-
-  </section>
+</section>
 
 
-  <section class="cv-section">
-    <h2>Research Expertise</h2>
+<!-- RESEARCH EXPERIENCE -->
 
-    <p>
-      Autoimmunity • Type 1 Diabetes • B-cell Biology •
-      Immune Tolerance • Immunometabolism • Translational Immunology •
-      Systems Immunology • Precision Medicine
-    </p>
+<section class="cv-section">
 
-  </section>
+  <h2>Research Experience</h2>
 
+  <p>
+    Research appointments, institutional affiliations, major projects,
+    responsibilities, and scientific contributions will be listed here.
+  </p>
 
-  <section class="cv-section">
-    <h2>Technical Expertise</h2>
-
-    <div class="skills">
-
-      <div>
-        <h3>Experimental</h3>
-
-        <p>
-          Flow Cytometry<br>
-          Immune Phenotyping<br>
-          B-cell Biology<br>
-          Cell Culture<br>
-          Mouse Models<br>
-          Immunometabolism<br>
-          Molecular & Cellular Assays
-        </p>
-      </div>
+</section>
 
 
-      <div>
-        <h3>Computational</h3>
+<!-- RESEARCH EXPERTISE -->
 
-        <p>
-          R<br>
-          Python<br>
-          RNA-seq<br>
-          DESeq2<br>
-          Single-cell RNA-seq<br>
-          Seurat<br>
-          Scanpy<br>
-          Bioinformatics<br>
-          Statistical Analysis<br>
-          Data Visualization
-        </p>
-      </div>
+<section class="cv-section">
+
+  <h2>Research Expertise</h2>
+
+  <ul>
+    <li>Autoimmunity and Type 1 Diabetes</li>
+    <li>B-cell Biology and Immune Tolerance</li>
+    <li>Type I Interferon Signaling</li>
+    <li>Immunometabolism</li>
+    <li>Translational Immunology</li>
+    <li>Systems Immunology</li>
+    <li>Immune Biomarker Discovery</li>
+    <li>Precision Medicine</li>
+  </ul>
+
+</section>
+
+
+<!-- TECHNICAL EXPERTISE -->
+
+<section class="cv-section">
+
+  <h2>Technical Expertise</h2>
+
+  <div class="expertise-grid">
+
+
+    <div class="expertise-box">
+
+      <h3>Experimental</h3>
+
+      <ul>
+        <li>Flow Cytometry</li>
+        <li>Immune Cell Phenotyping</li>
+        <li>Animal Models</li>
+        <li>Immunometabolism</li>
+        <li>Cellular and Molecular Immunology</li>
+        <li>Experimental Autoimmunity</li>
+      </ul>
 
     </div>
 
-  </section>
+
+    <div class="expertise-box">
+
+      <h3>Computational</h3>
+
+      <ul>
+        <li>RNA-seq Analysis</li>
+        <li>Single-cell RNA-seq</li>
+        <li>R / Bioconductor</li>
+        <li>Python</li>
+        <li>Bioinformatics</li>
+        <li>High-dimensional Data Visualization</li>
+        <li>Computational Flow Cytometry</li>
+        <li>Multi-omics Analysis</li>
+      </ul>
+
+    </div>
 
 
-  <section class="cv-section">
-    <h2>Publications</h2>
+  </div>
 
-    <p>
-      Selected peer-reviewed publications will be listed here.
-    </p>
-
-    <p>
-      Complete publication record:
-      Google Scholar | PubMed | ORCID
-    </p>
-
-  </section>
+</section>
 
 
-  <section class="cv-section">
-    <h2>Grants, Fellowships & Awards</h2>
+<!-- PUBLICATIONS -->
 
-    <p>
-      Grants, fellowships, scholarships, awards, and research
-      recognitions will be listed here.
-    </p>
+<section class="cv-section">
 
-  </section>
+  <h2>Publications</h2>
 
+  <p>
+    Peer-reviewed publications and scholarly articles will be listed here.
+  </p>
 
-  <section class="cv-section">
-    <h2>Scientific Presentations</h2>
-
-    <p>
-      Selected oral presentations, invited talks, posters,
-      and conference presentations will be listed here.
-    </p>
-
-  </section>
+</section>
 
 
-  <section class="cv-section">
-    <h2>Peer Review & Editorial Activities</h2>
+<!-- GRANTS -->
 
-    <p>
-      Scientific peer-review and editorial activities will be
-      listed here.
-    </p>
+<section class="cv-section">
 
-  </section>
+  <h2>Grants, Fellowships &amp; Awards</h2>
 
+  <p>
+    Research grants, fellowships, awards, and competitive academic
+    recognitions will be listed here.
+  </p>
 
-  <section class="cv-section">
-    <h2>Teaching & Mentoring</h2>
-
-    <p>
-      Teaching, student mentoring, research supervision,
-      and training activities will be listed here.
-    </p>
-
-  </section>
+</section>
 
 
-  <section class="cv-section">
-    <h2>Professional Service & Memberships</h2>
+<!-- PRESENTATIONS -->
 
-    <p>
-      Professional memberships, scientific societies,
-      committee service, and academic activities will be
-      listed here.
-    </p>
+<section class="cv-section">
 
-  </section>
+  <h2>Scientific Presentations</h2>
+
+  <p>
+    Oral presentations, poster presentations, invited talks,
+    conferences, and scientific symposia will be listed here.
+  </p>
+
+</section>
 
 
-  <section class="cv-section">
-    <h2>Professional Profiles</h2>
+<!-- PEER REVIEW -->
 
-    <p>
-      GitHub |
-      LinkedIn |
-      Google Scholar |
+<section class="cv-section">
+
+  <h2>Peer Review &amp; Editorial Activities</h2>
+
+  <p>
+    Scientific peer-review activities, invited reviewing,
+    and editorial contributions will be listed here.
+  </p>
+
+</section>
+
+
+<!-- TEACHING -->
+
+<section class="cv-section">
+
+  <h2>Teaching &amp; Mentoring</h2>
+
+  <p>
+    Teaching, student mentoring, research training,
+    and educational activities will be listed here.
+  </p>
+
+</section>
+
+
+<!-- SERVICE -->
+
+<section class="cv-section">
+
+  <h2>Professional Service &amp; Memberships</h2>
+
+  <p>
+    Scientific societies, professional organizations,
+    committee service, and academic engagement will be listed here.
+  </p>
+
+</section>
+
+
+<!-- PROFESSIONAL PROFILES -->
+
+<section class="cv-section">
+
+  <h2>Professional Profiles</h2>
+
+  <div class="profile-links">
+
+    <a href="https://github.com/mgtedla">
+      GitHub
+    </a>
+
+    <a href="#">
+      Google Scholar
+    </a>
+
+    <a href="#">
       ORCID
-    </p>
+    </a>
 
-  </section>
+    <a href="#">
+      LinkedIn
+    </a>
+
+  </div>
+
+</section>
+
 
 </main>
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
+
   <p>© 2026 Mebrahtu G. Tedla</p>
+
+  <p>Curriculum Vitae | Immunology Research</p>
+
 </footer>
 
+
 </body>
+
 </html>
