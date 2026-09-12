@@ -1,1 +1,515 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Visual & Computational Immunology | Mebrahtu G. Tedla</title>
+
+  <meta name="description"
+        content="Visual and computational immunology resources, scientific visualizations, bioinformatics demonstrations, and educational tutorials by Mebrahtu G. Tedla.">
+
+  <style>
+
+    :root {
+      --primary: #123B5D;
+      --secondary: #1F7A8C;
+      --accent: #2A9D8F;
+      --light-bg: #F4F8FB;
+      --text: #222222;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: #f5f7f9;
+      line-height: 1.7;
+    }
+
+
+    /* NAVIGATION */
+
+    nav {
+      background: var(--primary);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .site-name {
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+      padding: 8px 10px;
+      border-radius: 5px;
+      transition: background 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      background: var(--secondary);
+    }
+
+
+    /* PAGE HEADER */
+
+    .page-header {
+      background: white;
+      text-align: center;
+      padding: 70px 24px 60px;
+    }
+
+    .page-header h1 {
+      color: var(--primary);
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .page-header p {
+      max-width: 780px;
+      margin: auto;
+      font-size: 18px;
+      color: #555;
+    }
+
+
+    /* MAIN */
+
+    main {
+      max-width: 1050px;
+      margin: auto;
+      padding: 55px 24px;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 850px;
+      margin: 0 auto 55px;
+    }
+
+    .intro h2 {
+      color: var(--primary);
+      font-size: 30px;
+    }
+
+
+    /* CATEGORY GRID */
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .category-card {
+      background: white;
+      border: 1px solid #e1e5e8;
+      border-radius: 10px;
+      padding: 28px;
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .category-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.10);
+      border-color: var(--secondary);
+    }
+
+    .category-card h2 {
+      color: var(--primary);
+      margin-top: 0;
+      font-size: 23px;
+    }
+
+    .category-card h2::after {
+      content: "";
+      display: block;
+      width: 45px;
+      height: 3px;
+      background: var(--secondary);
+      margin-top: 8px;
+    }
+
+    .category-card p {
+      color: #555;
+    }
+
+    .topics {
+      font-size: 14px;
+      color: var(--secondary);
+      font-weight: bold;
+    }
+
+
+    /* MEDIA PLACEHOLDER */
+
+    .media-area {
+      margin-top: 20px;
+      background: var(--light-bg);
+      border: 1px dashed #aebdc7;
+      border-radius: 8px;
+      padding: 22px;
+      text-align: center;
+      color: #61717c;
+    }
+
+    .media-area strong {
+      color: var(--primary);
+    }
+
+
+    /* BUTTON */
+
+    .button {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 9px 16px;
+      border: 2px solid var(--primary);
+      border-radius: 6px;
+      text-decoration: none;
+      color: var(--primary);
+      background: white;
+      transition: all 0.25s ease;
+    }
+
+    .button:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+
+    /* DISCLAIMER */
+
+    .note {
+      margin-top: 55px;
+      background: white;
+      border-left: 5px solid var(--secondary);
+      padding: 22px 25px;
+      border-radius: 6px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+      background: var(--primary);
+      color: #e4edf2;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 4px;
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 750px) {
+
+      .category-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-container {
+        justify-content: center;
+      }
+
+      .site-name {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .nav-links {
+        text-align: center;
+      }
+
+      .nav-links a {
+        display: inline-block;
+        margin: 3px;
+      }
+
+      .page-header h1 {
+        font-size: 34px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+  <div class="nav-container">
+
+    <div class="site-name">
+      Mebrahtu G. Tedla
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#research">Research</a>
+      <a href="index.html#publications">Publications</a>
+      <a href="visual-immunology.html">Visual Immunology</a>
+      <a href="cv.html">CV</a>
+      <a href="blog.html">Blog</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+
+  </div>
+
+</nav>
+
+
+<header class="page-header">
+
+  <h1>Visual & Computational Immunology</h1>
+
+  <p>
+    Exploring immunological concepts through scientific visualization,
+    computational analysis, and educational demonstrations.
+  </p>
+
+</header>
+
+
+<main>
+
+
+<section class="intro">
+
+  <h2>Explore Immunology Through Data & Visualization</h2>
+
+  <p>
+    This space brings together scientific figures, pathway illustrations,
+    computational demonstrations, and educational tutorials that connect
+    experimental immunology with modern data-analysis approaches.
+  </p>
+
+</section>
+
+
+
+<div class="category-grid">
+
+
+  <!-- IMMUNOLOGY CONCEPTS -->
+
+  <article class="category-card">
+
+    <h2>Immunology Concepts</h2>
+
+    <p>
+      Visual explanations of fundamental immune mechanisms,
+      immune-cell interactions, signaling pathways, and immune tolerance.
+    </p>
+
+    <div class="topics">
+      B cells • T cells • Immune tolerance • Signaling • Immune interactions
+    </div>
+
+    <div class="media-area">
+      <strong>Scientific Figures & Interactive Diagrams</strong>
+      <br>
+      Images and visual explanations will be added here.
+    </div>
+
+  </article>
+
+
+
+  <!-- AUTOIMMUNITY -->
+
+  <article class="category-card">
+
+    <h2>Autoimmunity & Type 1 Diabetes</h2>
+
+    <p>
+      Visualizing mechanisms involved in autoimmune disease development,
+      immune dysregulation, and Type 1 diabetes pathogenesis.
+    </p>
+
+    <div class="topics">
+      Type I IFN • B-cell tolerance • Autoimmunity • T1D progression
+    </div>
+
+    <div class="media-area">
+      <strong>T1D & Autoimmunity Visualizations</strong>
+      <br>
+      Pathway figures and educational diagrams will be added here.
+    </div>
+
+  </article>
+
+
+
+  <!-- IMMUNOMETABOLISM -->
+
+  <article class="category-card">
+
+    <h2>Immunometabolism</h2>
+
+    <p>
+      Exploring how metabolic pathways regulate immune-cell
+      activation, differentiation, and function.
+    </p>
+
+    <div class="topics">
+      Glycolysis • OXPHOS • Metabolic reprogramming • SCENITH
+    </div>
+
+    <div class="media-area">
+      <strong>Metabolic Pathway Visualizations</strong>
+      <br>
+      Figures and demonstrations will be added here.
+    </div>
+
+  </article>
+
+
+
+  <!-- FLOW CYTOMETRY -->
+
+  <article class="category-card">
+
+    <h2>Computational Flow Cytometry</h2>
+
+    <p>
+      Demonstrations of conventional and high-dimensional
+      flow-cytometry analysis for immune-cell phenotyping.
+    </p>
+
+    <div class="topics">
+      Gating • UMAP • t-SNE • Clustering • Immune phenotyping
+    </div>
+
+    <div class="media-area">
+      <strong>Video Tutorials</strong>
+      <br>
+      UMAP, t-SNE, gating, and computational flow-cytometry demonstrations
+      will be added here.
+    </div>
+
+  </article>
+
+
+
+  <!-- TRANSCRIPTOMICS -->
+
+  <article class="category-card">
+
+    <h2>Transcriptomics & Bioinformatics</h2>
+
+    <p>
+      Practical demonstrations of transcriptomic data analysis
+      and visualization applied to immunological research.
+    </p>
+
+    <div class="topics">
+      RNA-seq • PCA • DESeq2 • Volcano plots • Heatmaps • Pathways
+    </div>
+
+    <div class="media-area">
+      <strong>Bioinformatics Tutorials</strong>
+      <br>
+      Analysis workflows, figures, and educational videos will be added here.
+    </div>
+
+  </article>
+
+
+
+  <!-- SINGLE CELL -->
+
+  <article class="category-card">
+
+    <h2>Single-Cell & Multi-omics</h2>
+
+    <p>
+      Exploring immune-cell heterogeneity and disease-associated
+      signatures using single-cell and integrative multi-omics approaches.
+    </p>
+
+    <div class="topics">
+      scRNA-seq • UMAP • Cell annotation • Multi-omics • Precision immunology
+    </div>
+
+    <div class="media-area">
+      <strong>Single-Cell Visualizations & Tutorials</strong>
+      <br>
+      Computational demonstrations and figures will be added here.
+    </div>
+
+  </article>
+
+
+</div>
+
+
+
+<div class="note">
+
+  <strong>Educational & Scientific Resource</strong>
+
+  <p>
+    Content presented on this page is intended for scientific communication,
+    education, and demonstration. Public, teaching, simulated, or appropriately
+    shareable datasets will be used for computational demonstrations.
+  </p>
+
+</div>
+
+
+</main>
+
+
+
+<footer>
+
+  <p>© 2026 Mebrahtu G. Tedla</p>
+
+  <p>Visual & Computational Immunology</p>
+
+</footer>
+
+
+</body>
+
+</html>
