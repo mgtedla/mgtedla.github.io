@@ -1,435 +1,1076 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
   <title>Mebrahtu G. Tedla | Immunology Research</title>
 
   <meta name="description"
         content="Academic website of Mebrahtu G. Tedla, an immunology researcher integrating experimental, translational, systems, and computational approaches.">
 
- <meta name="description"
-      content="Academic website of Mebrahtu G. Tedla, an immunology researcher integrating experimental, translational, systems, and computational approaches.">
 
 <style>
 
-  :root {
-    --primary: #123B5D;
-    --secondary: #1F7A8C;
-    --accent: #2A9D8F;
-    --light-bg: #F4F8FB;
-    --text: #222222;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--text);
-    background: #f5f7f9;
-    line-height: 1.7;
-  }
-
- nav {
-    background: #123B5D;
-    border-bottom: 1px solid #0d2d47;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+:root {
+  --primary: #123B5D;
+  --secondary: #1F7A8C;
+  --accent: #2A9D8F;
+  --light-bg: #F4F8FB;
+  --text: #222222;
 }
 
-    .nav-container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 16px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
 
-    .site-name {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
+* {
+  box-sizing: border-box;
 }
 
-   .nav-links a {
-    margin-left: 22px;
-    text-decoration: none;
-    color: white;
-    font-size: 15px;
-    padding: 8px 10px;
-    border-radius: 5px;
-    transition: background-color 0.25s ease, color 0.25s ease;
-    }
 
-  .nav-links a:hover {
-    background-color: #1F7A8C;
-    color: white;
-    text-decoration: none;
+html {
+  scroll-behavior: smooth;
 }
 
-    .hero {
-      background: white;
-      padding: 80px 24px 65px;
-    }
 
-    .hero-container {
-      max-width: 1000px;
-      margin: auto;
-      display: grid;
-grid-template-columns: 210px 1fr;
-gap: 35px;
-      align-items: center;
-    }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: #f5f7f9;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+  background: var(--primary);
+  border-bottom: 1px solid #0d2d47;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+.nav-container {
+
+  max-width: 1100px;
+
+  margin: auto;
+
+  padding: 16px 24px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+}
+
+
+.site-name {
+
+  font-size: 20px;
+
+  font-weight: bold;
+
+  color: white;
+
+}
+
+
+.nav-links a {
+
+  margin-left: 12px;
+
+  text-decoration: none;
+
+  color: white;
+
+  font-size: 15px;
+
+  padding: 8px 10px;
+
+  border-radius: 5px;
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+
+}
+
+
+.nav-links a:hover {
+
+  background-color: var(--secondary);
+
+  color: white;
+
+}
+
+
+.nav-links a:focus {
+
+  outline: 2px solid white;
+
+  outline-offset: 3px;
+
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+
+  background: white;
+
+  padding: 80px 24px 65px;
+
+}
+
+
+.hero-container {
+
+  max-width: 1000px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 210px 1fr;
+
+  gap: 35px;
+
+  align-items: center;
+
+}
+
 
 .profile-photo {
-    width: 190px;
-    height: 190px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center top;
-    border: 4px solid #eee;
+
+  width: 190px;
+
+  height: 190px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  object-position: center top;
+
+  border: 4px solid #e7eef2;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+
 }
 
- .hero h1 {
-    font-size: 44px;
-    margin: 0 0 8px;
-    color: #123B5D;
+
+.profile-photo:hover {
+
+  transform: scale(1.04);
+
+  box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+
 }
+
+
+.hero h1 {
+
+  font-size: 44px;
+
+  margin: 0 0 8px;
+
+  color: var(--primary);
+
+}
+
 
 .hero-title {
-    font-size: 19px;
-    color: #1F7A8C;
-    margin-bottom: 22px;
-    font-weight: 500;
+
+  font-size: 19px;
+
+  color: var(--secondary);
+
+  margin-bottom: 22px;
+
+  font-weight: 500;
 
 }
 
-    .hero p {
-      font-size: 17px;
-      max-width: 700px;
-    }
 
-    .buttons {
-      margin-top: 25px;
-    }
+.hero p {
 
-    .button {
-      display: inline-block;
-      padding: 10px 18px;
-      margin: 5px 8px 5px 0;
-      border: 1px solid #222;
-      border-radius: 5px;
-      text-decoration: none;
-      color: #222;
-      background: white;
-    }
+  font-size: 17px;
 
-    .button:hover {
-      background: #222;
-      color: white;
-    }
+  max-width: 700px;
 
-    main {
-      max-width: 1000px;
-      margin: auto;
-      padding: 45px 24px;
-    }
+}
 
-    section {
-      margin-bottom: 60px;
-    }
 
-    h2 {
-      font-size: 30px;
-      margin-bottom: 18px;
-    }
+/* Hero entrance animation */
 
-    .research-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
-    }
+.hero-container > div {
 
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 8px;
-      border: 1px solid #e3e3e3;
-    }
+  animation: fadeUp 0.8s ease-out;
 
-    .card h3 {
-      margin-top: 0;
-    }
+}
 
-    .project {
-      background: white;
-      padding: 25px;
-      margin-bottom: 20px;
-      border-left: 4px solid #555;
-      border-radius: 5px;
-    }
 
-    footer {
-      background: #222;
-      color: #ddd;
-      text-align: center;
-      padding: 30px 20px;
-      margin-top: 40px;
-    }
+.profile-photo {
 
-    footer a {
-      color: white;
-    }
+  animation: fadeIn 0.8s ease-out;
 
-    @media (max-width: 750px) {
-      .hero-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
+}
 
-      .photo-placeholder,
-      .profile-photo {
-        margin: auto;
-      }
 
-      .research-grid {
-        grid-template-columns: 1fr;
-      }
+@keyframes fadeUp {
 
-      .nav-container {
-        justify-content: center;
-      }
+  from {
 
-      .nav-links {
-        margin-top: 10px;
-      }
+    opacity: 0;
 
-      .nav-links a {
-        margin: 0 8px;
-      }
+    transform: translateY(18px);
 
-      .hero h1 {
-        font-size: 36px;
-      }
-    }
-  </style>
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}
+
+
+@keyframes fadeIn {
+
+  from {
+
+    opacity: 0;
+
+    transform: scale(0.96);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: scale(1);
+
+  }
+
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons {
+
+  margin-top: 25px;
+
+}
+
+
+.button {
+
+  display: inline-block;
+
+  padding: 11px 19px;
+
+  margin: 5px 8px 5px 0;
+
+  border: 2px solid var(--primary);
+
+  border-radius: 6px;
+
+  text-decoration: none;
+
+  color: var(--primary);
+
+  background: white;
+
+  font-weight: 500;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+}
+
+
+.button:hover {
+
+  background: var(--primary);
+
+  color: white;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 6px 14px rgba(18,59,93,0.18);
+
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+main {
+
+  max-width: 1000px;
+
+  margin: auto;
+
+  padding: 45px 24px;
+
+}
+
+
+section {
+
+  margin-bottom: 65px;
+
+  scroll-margin-top: 100px;
+
+}
+
+
+h2 {
+
+  font-size: 30px;
+
+  margin-bottom: 20px;
+
+  color: var(--primary);
+
+}
+
+
+h2::after {
+
+  content: "";
+
+  display: block;
+
+  width: 55px;
+
+  height: 3px;
+
+  background: var(--secondary);
+
+  margin-top: 8px;
+
+  border-radius: 2px;
+
+}
+
+
+/* =========================
+   RESEARCH CARDS
+========================= */
+
+.research-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 22px;
+
+}
+
+
+.card {
+
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 9px;
+
+  border: 1px solid #e3e3e3;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+
+}
+
+
+.card:hover {
+
+  transform: translateY(-6px);
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.10);
+
+  border-color: var(--secondary);
+
+}
+
+
+.card h3 {
+
+  margin-top: 0;
+
+  color: var(--primary);
+
+  transition: color 0.25s ease;
+
+}
+
+
+.card:hover h3 {
+
+  color: var(--secondary);
+
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.project {
+
+  background: white;
+
+  padding: 25px;
+
+  margin-bottom: 20px;
+
+  border-left: 5px solid var(--secondary);
+
+  border-radius: 6px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+
+}
+
+
+.project:hover {
+
+  transform: translateX(5px);
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.09);
+
+  border-left-color: var(--accent);
+
+}
+
+
+.project h3 {
+
+  color: var(--primary);
+
+  margin-top: 0;
+
+}
+
+
+/* =========================
+   LINKS
+========================= */
+
+main a {
+
+  color: var(--secondary);
+
+}
+
+
+main a:hover {
+
+  color: var(--primary);
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+  background: var(--primary);
+
+  color: #e4edf2;
+
+  text-align: center;
+
+  padding: 30px 20px;
+
+  margin-top: 40px;
+
+}
+
+
+footer p {
+
+  margin: 4px 0;
+
+}
+
+
+footer a {
+
+  color: white;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 750px) {
+
+  .hero {
+
+    padding-top: 55px;
+
+  }
+
+
+  .hero-container {
+
+    grid-template-columns: 1fr;
+
+    text-align: center;
+
+  }
+
+
+  .profile-photo {
+
+    margin: auto;
+
+    width: 175px;
+
+    height: 175px;
+
+  }
+
+
+  .research-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .nav-container {
+
+    justify-content: center;
+
+  }
+
+
+  .site-name {
+
+    width: 100%;
+
+    text-align: center;
+
+    margin-bottom: 8px;
+
+  }
+
+
+  .nav-links {
+
+    text-align: center;
+
+  }
+
+
+  .nav-links a {
+
+    display: inline-block;
+
+    margin: 3px 2px;
+
+  }
+
+
+  .hero h1 {
+
+    font-size: 36px;
+
+  }
+
+
+  .hero-title {
+
+    font-size: 17px;
+
+  }
+
+
+  .button {
+
+    margin: 5px;
+
+  }
+
+}
+
+
+/* Reduce animations for users
+   who prefer less motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+
+    scroll-behavior: auto;
+
+  }
+
+
+  *,
+  *::before,
+  *::after {
+
+    animation-duration: 0.01ms !important;
+
+    transition-duration: 0.01ms !important;
+
+  }
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
+
 <nav>
+
   <div class="nav-container">
-    <div class="site-name">Mebrahtu G. Tedla</div>
+
+    <div class="site-name">
+      Mebrahtu G. Tedla
+    </div>
+
 
     <div class="nav-links">
+
       <a href="index.html">Home</a>
+
       <a href="#research">Research</a>
+
       <a href="#projects">Projects</a>
+
       <a href="#publications">Publications</a>
+
       <a href="cv.html">CV</a>
+
       <a href="blog.html">Blog</a>
+
       <a href="#contact">Contact</a>
+
     </div>
+
   </div>
+
 </nav>
 
 
+
 <section class="hero">
+
   <div class="hero-container">
 
-  <img src="photo.png"
-     alt="Mebrahtu G. Tedla"
-     class="profile-photo">
+
+    <img
+      src="photo.png"
+      alt="Mebrahtu G. Tedla"
+      class="profile-photo">
+
 
     <div>
-      <h1>Mebrahtu G. Tedla</h1>
 
-   <div class="hero-title">
-  Immunologist | Translational & Systems Immunology |
-  Computational Immunology | Precision Medicine
-</div>
+      <h1>
+        Mebrahtu G. Tedla
+      </h1>
+
+
+      <div class="hero-title">
+
+        Immunologist |
+        Translational & Systems Immunology |
+        Computational Immunology |
+        Precision Medicine
+
+      </div>
+
 
       <p>
+
         I am an immunology researcher interested in understanding
         immune dysregulation, loss of immune tolerance, and mechanisms
         underlying autoimmune disease progression.
+
       </p>
 
+
       <p>
+
         My research integrates experimental immunology, animal models,
         flow cytometry, immunometabolism, transcriptomics, and computational
         approaches to investigate disease mechanisms and identify
         translational biomarkers.
+
       </p>
 
+
       <div class="buttons">
-        <a class="button" href="#research">Research</a>
-        <a class="button" href="cv.html">View CV</a>
-        <a class="button" href="blog.html">Scientific Blog</a>
+
+        <a class="button"
+           href="#research">
+          Research
+        </a>
+
+        <a class="button"
+           href="cv.html">
+          View CV
+        </a>
+
+        <a class="button"
+           href="blog.html">
+          Scientific Blog
+        </a>
+
       </div>
+
     </div>
 
   </div>
+
 </section>
+
 
 
 <main>
 
+
 <section id="research">
-  <h2>Research Interests</h2>
+
+  <h2>
+    Research Interests
+  </h2>
+
 
   <div class="research-grid">
 
+
     <div class="card">
-      <h3>Autoimmunity & Type 1 Diabetes</h3>
+
+      <h3>
+        Autoimmunity & Type 1 Diabetes
+      </h3>
+
       <p>
+
         Investigating mechanisms that contribute to immune tolerance loss
         and progression of autoimmune diabetes.
+
       </p>
+
     </div>
 
+
     <div class="card">
-      <h3>B-cell Biology</h3>
+
+      <h3>
+        B-cell Biology
+      </h3>
+
       <p>
+
         Studying B-cell development, activation, tolerance checkpoints,
         and their contribution to autoimmune disease.
+
       </p>
+
     </div>
 
+
     <div class="card">
-      <h3>Immunometabolism</h3>
+
+      <h3>
+        Immunometabolism
+      </h3>
+
       <p>
+
         Exploring how metabolic reprogramming influences immune-cell
         phenotype, activation, and function.
+
       </p>
+
     </div>
+
 
     <div class="card">
-      <h3>Systems & Computational Immunology</h3>
+
+      <h3>
+        Systems & Computational Immunology
+      </h3>
+
       <p>
+
         Applying transcriptomics, single-cell analysis, bioinformatics,
         and integrative computational approaches to immunological questions.
+
       </p>
+
     </div>
 
+
   </div>
+
 </section>
+
 
 
 <section id="projects">
-  <h2>Selected Research Projects</h2>
+
+  <h2>
+    Selected Research Projects
+  </h2>
+
 
   <div class="project">
-    <h3>Type I Interferon and B-cell Immunometabolism</h3>
+
+    <h3>
+      Type I Interferon and B-cell Immunometabolism
+    </h3>
+
     <p>
+
       Investigating how Type I interferon signaling alters B-cell metabolism,
       immune activation, and tolerance during the development of Type 1 diabetes.
+
     </p>
+
   </div>
 
+
   <div class="project">
-    <h3>B-cell Transcriptional Signatures</h3>
+
+    <h3>
+      B-cell Transcriptional Signatures
+    </h3>
+
     <p>
+
       Using RNA sequencing and computational analysis to identify B-cell
       transcriptional programs and molecular pathways associated with
       autoimmune disease progression.
+
     </p>
+
   </div>
 
+
   <div class="project">
-    <h3>Immune Biomarker Discovery</h3>
+
+    <h3>
+      Immune Biomarker Discovery
+    </h3>
+
     <p>
+
       Exploring immune, transcriptomic, and metabolic signatures that may help
       identify early disease changes and support precision medicine approaches.
+
     </p>
+
   </div>
+
 
 </section>
 
 
+
 <section id="publications">
-  <h2>Selected Publications</h2>
+
+  <h2>
+    Selected Publications
+  </h2>
+
 
   <p>
     Selected peer-reviewed publications will be added here.
   </p>
 
+
   <p>
-    A complete publication list can also be linked to Google Scholar,
-    PubMed, or ORCID.
+
+    A complete publication list can also be linked to
+    Google Scholar, PubMed, or ORCID.
+
   </p>
+
 </section>
+
 
 
 <section>
-  <h2>Experimental & Computational Expertise</h2>
+
+  <h2>
+    Experimental & Computational Expertise
+  </h2>
+
 
   <div class="research-grid">
 
-    <div class="card">
-      <h3>Experimental</h3>
-      <p>
-        Flow cytometry<br>
-        Immune phenotyping<br>
-        B-cell biology<br>
-        Immunometabolism<br>
-        Cell culture<br>
-        Mouse models<br>
-        Molecular and cellular assays
-      </p>
-    </div>
 
     <div class="card">
-      <h3>Computational</h3>
+
+      <h3>
+        Experimental
+      </h3>
+
       <p>
-        R & Python<br>
-        RNA-seq<br>
-        DESeq2<br>
-        Single-cell RNA-seq<br>
-        Seurat & Scanpy<br>
-        Data visualization<br>
-        Bioinformatics & statistical analysis
+
+        Flow cytometry<br>
+
+        Immune phenotyping<br>
+
+        B-cell biology<br>
+
+        Immunometabolism<br>
+
+        Cell culture<br>
+
+        Mouse models<br>
+
+        Molecular and cellular assays
+
       </p>
+
     </div>
+
+
+    <div class="card">
+
+      <h3>
+        Computational
+      </h3>
+
+      <p>
+
+        R & Python<br>
+
+        RNA-seq<br>
+
+        DESeq2<br>
+
+        Single-cell RNA-seq<br>
+
+        Seurat & Scanpy<br>
+
+        Data visualization<br>
+
+        Bioinformatics & statistical analysis
+
+      </p>
+
+    </div>
+
 
   </div>
+
 </section>
 
 
+
 <section id="contact">
-  <h2>Contact</h2>
+
+  <h2>
+    Contact
+  </h2>
+
 
   <p>
     Email: your-email@example.com
   </p>
 
-  <p>
-    GitHub:
-    <a href="https://github.com/mgtedla">
-      github.com/mgtedla
-    </a>
-  </p>
 
   <p>
-    LinkedIn | Google Scholar | ORCID
+
+    GitHub:
+
+    <a href="https://github.com/mgtedla"
+       target="_blank"
+       rel="noopener noreferrer">
+
+      github.com/mgtedla
+
+    </a>
+
   </p>
+
+
+  <p>
+
+    LinkedIn |
+    Google Scholar |
+    ORCID
+
+  </p>
+
 
 </section>
+
 
 </main>
 
 
+
 <footer>
-  <p>© 2026 Mebrahtu G. Tedla</p>
-  <p>Academic Research Website</p>
+
+  <p>
+    © 2026 Mebrahtu G. Tedla
+  </p>
+
+  <p>
+    Academic Research Website
+  </p>
+
 </footer>
 
+
 </body>
+
 </html>
