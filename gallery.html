@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Gallery | Mebrahtu G. Tedla</title>
+
+  <meta name="description"
+        content="Scientific and professional gallery of Mebrahtu G. Tedla, including conference presentations, research activities, and scientific illustrations.">
+
+<style>
+
+:root {
+  --primary: #123B5D;
+  --secondary: #1F7A8C;
+  --accent: #2A9D8F;
+  --light-bg: #F4F8FB;
+  --text: #222222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: #f5f7f9;
+  line-height: 1.7;
+}
+
+
+/* NAVIGATION */
+
+nav {
+  background: var(--primary);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.site-name {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 12px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  transition: background 0.25s ease;
+}
+
+.nav-links a:hover {
+  background: var(--secondary);
+}
+
+
+/* PAGE HEADER */
+
+.page-header {
+  background: white;
+  text-align: center;
+  padding: 70px 24px 60px;
+}
+
+.page-header h1 {
+  color: var(--primary);
+  font-size: 42px;
+  margin: 0 0 12px;
+}
+
+.page-header p {
+  max-width: 750px;
+  margin: auto;
+  font-size: 18px;
+  color: #555;
+}
+
+
+/* MAIN */
+
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 55px 24px;
+}
+
+.gallery-section {
+  margin-bottom: 70px;
+}
+
+.gallery-section h2 {
+  color: var(--primary);
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.gallery-section h2::after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 3px;
+  background: var(--secondary);
+  margin-top: 8px;
+}
+
+.section-description {
+  color: #555;
+  max-width: 800px;
+  margin-bottom: 30px;
+}
+
+
+/* GALLERY GRID */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.gallery-item {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e1e5e8;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.04);
+}
+
+.gallery-caption {
+  padding: 18px 20px;
+}
+
+.gallery-caption h3 {
+  margin: 0 0 6px;
+  color: var(--primary);
+  font-size: 18px;
+}
+
+.gallery-caption p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+
+/* PLACEHOLDERS */
+
+.placeholder {
+  height: 230px;
+  background: var(--light-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #6b7c86;
+  padding: 20px;
+}
+
+
+/* FOOTER */
+
+footer {
+  background: var(--primary);
+  color: #e4edf2;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+footer p {
+  margin: 4px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-container {
+    justify-content: center;
+  }
+
+  .site-name {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .nav-links {
+    text-align: center;
+  }
+
+  .nav-links a {
+    display: inline-block;
+    margin: 3px;
+  }
+
+  .page-header h1 {
+    font-size: 34px;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+  <div class="nav-container">
+
+    <div class="site-name">
+      Mebrahtu G. Tedla
+    </div>
+
+    <div class="nav-links">
+
+      <a href="index.html">Home</a>
+
+      <a href="index.html#research">Research</a>
+
+      <a href="index.html#projects">Projects</a>
+
+      <a href="index.html#publications">Publications</a>
+
+      <a href="visual-immunology.html">Visual Immunology</a>
+
+      <a href="gallery.html">Gallery</a>
+
+      <a href="cv.html">CV</a>
+
+      <a href="blog.html">Blog</a>
+
+      <a href="index.html#contact">Contact</a>
+
+    </div>
+
+  </div>
+
+</nav>
+
+
+
+<header class="page-header">
+
+  <h1>Scientific & Professional Gallery</h1>
+
+  <p>
+    Selected moments from scientific presentations, conferences,
+    research activities, and visual scientific communication.
+  </p>
+
+</header>
+
+
+
+<main>
+
+
+<!-- PRESENTATIONS -->
+
+<section class="gallery-section">
+
+  <h2>Presentations & Conferences</h2>
+
+  <p class="section-description">
+    Selected photographs from scientific conferences, poster presentations,
+    research symposia, workshops, and other professional activities.
+  </p>
+
+
+  <div class="gallery-grid">
+
+
+    <div class="gallery-item">
+
+      <div class="placeholder">
+        Conference presentation photo
+      </div>
+
+      <div class="gallery-caption">
+
+        <h3>Conference Presentation</h3>
+
+        <p>
+          Scientific presentation or conference details will be added here.
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="gallery-item">
+
+      <div class="placeholder">
+        Poster presentation photo
+      </div>
+
+      <div class="gallery-caption">
+
+        <h3>Poster Presentation</h3>
+
+        <p>
+          Poster title, meeting, location, and year can be added here.
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="gallery-item">
+
+      <div class="placeholder">
+        Symposium or workshop photo
+      </div>
+
+      <div class="gallery-caption">
+
+        <h3>Scientific Symposium</h3>
+
+        <p>
+          Symposium, workshop, or scientific meeting details.
+        </p>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- SCIENTIFIC ILLUSTRATIONS -->
+
+<section class="gallery-section">
+
+  <h2>Scientific Illustrations</h2>
+
+  <p class="section-description">
+    Selected scientific illustrations, graphical abstracts,
+    pathway diagrams, and research schematics.
+  </p>
+
+
+  <div class="gallery-grid">
+
+
+    <div class="gallery-item">
+
+      <div class="placeholder">
+        Type 1 diabetes illustration
+      </div>
+
+      <div class="gallery-caption">
+
+        <h3>Type 1 Diabetes</h3>
+
+        <p>
+          Illustrations related to autoimmune diabetes and disease progression.
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="gallery-item">
+
+      <div class="placeholder">
+        Immunology pathway figure
+      </div>
+
+      <div class="gallery-caption">
+
+        <h3>Immune Signaling</h3>
+
+        <p>
+          Scientific pathways and immune-cell signaling illustrations.
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="gallery-item">
+
+      <div class="placeholder">
+        Research schematic
+      </div>
+
+      <div class="gallery-caption">
+
+        <h3>Research Schematics</h3>
+
+        <p>
+          Graphical models and conceptual research illustrations.
+        </p>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<footer>
+
+  <p>© 2026 Mebrahtu G. Tedla</p>
+
+  <p>Scientific & Professional Gallery</p>
+
+</footer>
+
+
+</body>
+
+</html>
