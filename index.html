@@ -546,7 +546,55 @@ footer a {
 /* =========================
    MOBILE
 ========================= */
+/* =========================
+   SELECTED PUBLICATIONS
+========================= */
 
+.publication-list {
+  display: grid;
+  gap: 20px;
+}
+
+.publication-item {
+  background: white;
+  border: 1.5px solid #1F7A8C;
+  border-radius: 10px;
+  padding: 24px 28px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.publication-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+}
+
+.publication-item h3 {
+  color: #123B5D;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.publication-item .authors {
+  margin: 5px 0;
+  color: #333;
+}
+
+.publication-item .journal {
+  margin: 5px 0 12px;
+  color: #666;
+  font-style: italic;
+}
+
+.publication-item a {
+  color: #1F7A8C;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.publication-item a:hover {
+  text-decoration: underline;
+}
 @media (max-width: 750px) {
 
   .hero {
@@ -926,19 +974,216 @@ footer a {
   <h2>
     Selected Publications
   </h2>
+<div class="publication-list">
+
+  <!-- PUBLICATION 1 -->
+
+  <div class="publication-item">
+
+    <h3>
+      Type I Interferons as Contextual Regulators of B-Cell Tolerance
+      in Type 1 Diabetes
+    </h3>
+
+    <p class="authors">
+      <strong>Mebrahtu G. Tedla</strong>, Jamie L. Felton
+    </p>
+
+    <p class="journal">
+      Biomolecules, 2026; 16(4):563
+    </p>
+
+    <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13113026/"
+       target="_blank"
+       rel="noopener">
+      View Publication
+    </a>
+
+  </div>
 
 
-  <p>
-    Selected peer-reviewed publications will be added here.
-  </p>
+  <!-- PUBLICATION 2 -->
+
+  <div class="publication-item">
+
+    <h3>
+      The Immune Memory Response of In Vitro-Polarised Th1, Th2,
+      and Th17 Cells in the Face of Ovalbumin-Transgenic
+      Leishmania major in a Mouse Model
+    </h3>
+
+    <p class="authors">
+      <strong>Mebrahtu G. Tedla</strong>, Musammat F. Nahar,
+      Alison L. Every, Jean-Pierre Y. Scheerlinck
+    </p>
+
+    <p class="journal">
+      International Journal of Molecular Sciences, 2024; 25(16):8753
+    </p>
+
+    <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11354729/"
+       target="_blank"
+       rel="noopener">
+      View Publication
+    </a>
+
+  </div>
 
 
-  <p>
+  <!-- PUBLICATION 3 -->
 
-    A complete publication list can also be linked to
-    Google Scholar, PubMed, or ORCID.
+  <div class="publication-item">
 
-  </p>
+    <h3>
+      Engineering Pancreatic Islets to Transiently Codisplay on Their
+      Surface Thrombomodulin and CD47 Immunomodulatory Proteins as a
+      Means of Mitigating Instant Blood-Mediated Inflammatory Reaction
+      following Intraportal Transplantation
+    </h3>
+
+    <p class="authors">
+      Ali Turan, Mohammad Tarique, Lei Zhang, Shadab Kazmi,
+      Vahap Ulker, <strong>Mebrahtu G. Tedla</strong>,
+      Darshan Badal, Esma S. Yolcu, Haval Shirwan
+    </p>
+
+    <p class="journal">
+      The Journal of Immunology, 2024; 212(12):1971–1980
+    </p>
+
+    <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11160431/"
+       target="_blank"
+       rel="noopener">
+      View Publication
+    </a>
+
+  </div>
+
+
+  <!-- PUBLICATION 4 -->
+
+  <div class="publication-item">
+
+    <h3>
+      Protocol for Transplanting Pancreatic Islets into the
+      Parametrial Fat Pad of Female Mice
+    </h3>
+
+    <p class="authors">
+      <strong>Mebrahtu G. Tedla</strong>, Nathaniel Wright,
+      Esma S. Yolcu, Yadong Wang, Haval Shirwan
+    </p>
+
+    <p class="journal">
+      STAR Protocols, 2024; 5(1):102816
+    </p>
+
+    <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10801339/"
+       target="_blank"
+       rel="noopener">
+      View Publication
+    </a>
+
+  </div>
+
+
+  <!-- PUBLICATION 5 -->
+
+  <div class="publication-item">
+
+    <h3>
+      Measuring the Manipulation of T Helper Immune Responses
+      by Schistosoma mansoni
+    </h3>
+
+    <p class="authors">
+      <strong>Mebrahtu G. Tedla</strong>, Alison L. Every,
+      Jean-Pierre Y. Scheerlinck
+    </p>
+
+    <p class="journal">
+      International Journal of Molecular Sciences, 2022; 23(3):1462
+    </p>
+
+    <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8835762/"
+       target="_blank"
+       rel="noopener">
+      View Publication
+    </a>
+
+  </div>
+
+
+  <!-- PUBLICATION 6 -->
+
+  <div class="publication-item">
+
+    <h3>
+      Recognition of Schistosoma mansoni Egg-Expressed Ovalbumin
+      by T Cell Receptor Transgenic Mice
+    </h3>
+
+    <p class="authors">
+      <strong>Mebrahtu G. Tedla</strong>, Musammat F. Nahar,
+      Jana Hagen, Alison L. Every, Jean-Pierre Y. Scheerlinck
+    </p>
+
+    <p class="journal">
+      Experimental Parasitology, 2019; 206:107767
+    </p>
+
+    <a href="https://pubmed.ncbi.nlm.nih.gov/31520603/"
+       target="_blank"
+       rel="noopener">
+      View Publication
+    </a>
+
+  </div>
+
+
+  <!-- CONFERENCE ABSTRACT -->
+
+  <div class="publication-item">
+
+    <h3>
+      Modulating Alloreactive Immune Responses by Controlled Dual
+      Delivery of Fas and IL-2R Agonists Using a Lipocoacervate Platform
+    </h3>
+
+    <p class="authors">
+      <strong>Mebrahtu Tedla</strong>, Nathaniel Wright,
+      Mohammad Tarique, Vahap Ulker, Kathleen Yee-Flores,
+      Esma Yolcu, Yadong Wang, Haval Shirwan
+    </p>
+
+    <p class="journal">
+      The Journal of Immunology, 2024; 212(1 Supplement):0320_5053
+      — Conference Abstract
+    </p>
+
+    <a href="https://academic.oup.com/jimmunol/article-abstract/212/1_Supplement/0320_5053/7994991"
+       target="_blank"
+       rel="noopener">
+      View Abstract
+    </a>
+
+  </div>
+
+</div>
+
+ <section id="publications">
+
+  <h2>
+    Selected Publications
+  </h2>
+
+  <div class="publication-list">
+
+    <!-- publication cards go here -->
+
+  </div>
+
+</section>
 
 </section>
 
