@@ -954,6 +954,57 @@ url("hero-background.png.png");
   }
 
 }
+  /* =========================
+   SECTION SCIENTIFIC BANNERS
+========================= */
+
+.section-banner {
+  min-height: 230px;
+
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 35, 57, 0.94) 0%,
+      rgba(18, 59, 93, 0.76) 50%,
+      rgba(18, 59, 93, 0.25) 100%
+    ),
+    url("hero-background.png.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 45px 30px;
+  margin-bottom: 45px;
+}
+
+.section-banner h2 {
+  color: white;
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+
+  .section-banner {
+    min-height: 180px;
+    padding: 35px 20px;
+  }
+
+  .section-banner h2 {
+    font-size: 36px;
+  }
+}
 </style>
 
 </head>
@@ -1040,6 +1091,9 @@ url("hero-background.png.png");
 
 
 <section id="research">
+  <div class="section-banner">
+  <h2>RESEARCH</h2>
+</div>
 
   <h2>
     Research Interests
