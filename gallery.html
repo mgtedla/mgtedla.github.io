@@ -5,255 +5,379 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Gallery | Mebrahtu G. Tedla</title>
+  <title>Scientific &amp; Research Gallery | Mebrahtu G. Tedla</title>
 
-  <meta name="descrip
-        content="Scientific and professional gallery of Mebrahtu G. Tedla, including conference presentations, research activities, and scientific illustrations.">
+  <meta name="description"
+        content="Scientific and research gallery of Mebrahtu G. Tedla featuring presentations, conferences, research activities, experimental images, and scientific illustrations.">
 
-<style>
+  <style>
 
-:root {
-  --primary: #123B5D;
-  --secondary: #1F7A8C;
-  --accent: #2A9D8F;
-  --light-bg: #F4F8FB;
-  --text: #222222;
-}
+    :root {
+      --primary: #123B5D;
+      --secondary: #1F7A8C;
+      --accent: #2A9D8F;
+      --light-bg: #F4F8FB;
+      --text: #222222;
+    }
 
-* {
-  box-sizing: border-box;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-html {
-  scroll-behavior: smooth;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--text);
-  background: #f5f7f9;
-  line-height: 1.7;
-}
-
-
-/* NAVIGATION */
-
-nav {
-  background: var(--primary);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.nav-container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 16px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.site-name {
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  margin-left: 12px;
-  padding: 8px 10px;
-  border-radius: 5px;
-  transition: background 0.25s ease;
-}
-
-.nav-links a:hover {
-  background: var(--secondary);
-}
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: #f5f7f9;
+      line-height: 1.7;
+    }
 
 
-/* PAGE HEADER */
+    /* =========================
+       NAVIGATION
+    ========================= */
 
-.page-header {
-  background: white;
-  text-align: center;
-  padding: 70px 24px 60px;
-}
+    nav {
+      background: rgba(18, 59, 93, 0.96);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
 
-.page-header h1 {
-  color: var(--primary);
-  font-size: 42px;
-  margin: 0 0 12px;
-}
+    .nav-container {
+      max-width: 1500px;
+      margin: auto;
+      padding: 16px 30px;
+    }
 
-.page-header p {
-  max-width: 750px;
-  margin: auto;
-  font-size: 18px;
-  color: #555;
-}
+    .nav-links {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
 
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      white-space: nowrap;
+      transition: background 0.25s ease;
+    }
 
-/* MAIN */
-
-main {
-  max-width: 1100px;
-  margin: auto;
-  padding: 55px 24px;
-}
-
-.gallery-section {
-  margin-bottom: 70px;
-}
-
-.gallery-section h2 {
-  color: var(--primary);
-  font-size: 30px;
-  margin-bottom: 8px;
-}
-
-.gallery-section h2::after {
-  content: "";
-  display: block;
-  width: 55px;
-  height: 3px;
-  background: var(--secondary);
-  margin-top: 8px;
-}
-
-.section-description {
-  color: #555;
-  max-width: 800px;
-  margin-bottom: 30px;
-}
+    .nav-links a:hover {
+      background: var(--secondary);
+      color: white;
+    }
 
 
-/* GALLERY GRID */
+    /* =========================
+       SCIENTIFIC PAGE HERO
+    ========================= */
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
+    .page-hero {
+      min-height: 330px;
 
-.gallery-item {
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  border: 1px solid #e1e5e8;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
+      background:
+        linear-gradient(
+          90deg,
+          rgba(8, 35, 57, 0.94) 0%,
+          rgba(18, 59, 93, 0.78) 48%,
+          rgba(18, 59, 93, 0.25) 100%
+        ),
+        url("hero-background.png.png");
 
-.gallery-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-}
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
 
-.gallery-item img {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.35s ease;
-}
+      display: flex;
+      align-items: center;
+      padding: 55px 8%;
+    }
 
-.gallery-item:hover img {
-  transform: scale(1.04);
-}
+    .page-hero-content {
+      width: 100%;
+      max-width: 850px;
+    }
 
-.gallery-caption {
-  padding: 18px 20px;
-}
+    .page-hero-eyebrow {
+      color: #8FD3D8;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 14px;
+    }
 
-.gallery-caption h3 {
-  margin: 0 0 6px;
-  color: var(--primary);
-  font-size: 18px;
-}
+    .page-hero h1 {
+      color: white;
+      font-size: clamp(36px, 4.5vw, 54px);
+      line-height: 1.1;
+      margin: 0 0 18px;
+      font-weight: 700;
+    }
 
-.gallery-caption p {
-  margin: 0;
-  color: #666;
-  font-size: 14px;
-}
-
-
-/* PLACEHOLDERS */
-
-.placeholder {
-  height: 230px;
-  background: var(--light-bg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #6b7c86;
-  padding: 20px;
-}
+    .page-hero p {
+      color: rgba(255, 255, 255, 0.94);
+      font-size: 18px;
+      line-height: 1.7;
+      max-width: 760px;
+      margin: 0;
+    }
 
 
-/* FOOTER */
+    /* =========================
+       MAIN CONTENT
+    ========================= */
 
-footer {
-  background: var(--primary);
-  color: #e4edf2;
-  text-align: center;
-  padding: 30px 20px;
-}
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 55px 24px;
+    }
 
-footer p {
-  margin: 4px;
-}
+    .intro {
+      max-width: 850px;
+      margin: 0 auto 55px;
+      text-align: center;
+    }
+
+    .intro h2 {
+      color: var(--primary);
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .intro p {
+      color: #555;
+      font-size: 17px;
+    }
 
 
-/* MOBILE */
+    /* =========================
+       GALLERY SECTIONS
+    ========================= */
 
-@media (max-width: 850px) {
+    .gallery-section {
+      margin-bottom: 60px;
+    }
 
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .gallery-section h2 {
+      color: var(--primary);
+      font-size: 29px;
+      margin-bottom: 10px;
+    }
 
-}
+    .gallery-section h2::after {
+      content: "";
+      display: block;
+      width: 55px;
+      height: 4px;
+      background: var(--secondary);
+      margin-top: 8px;
+    }
 
-@media (max-width: 600px) {
+    .section-description {
+      color: #555;
+      max-width: 850px;
+      margin-bottom: 25px;
+    }
 
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
 
-  .nav-container {
-    justify-content: center;
-  }
+    /* =========================
+       GALLERY GRID
+    ========================= */
 
-  .site-name {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 10px;
-  }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
 
-  .nav-links {
-    text-align: center;
-  }
+    .gallery-card {
+      background: white;
+      border: 1px solid #e1e5e8;
+      border-radius: 12px;
+      overflow: hidden;
 
-  .nav-links a {
-    display: inline-block;
-    margin: 3px;
-  }
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+    }
 
-  .page-header h1 {
-    font-size: 34px;
-  }
+    .gallery-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+      border-color: var(--secondary);
+    }
 
-}
 
-</style>
+    /* =========================
+       IMAGE PLACEHOLDERS
+    ========================= */
+
+    .gallery-image {
+      min-height: 210px;
+      background: var(--light-bg);
+      border-bottom: 1px solid #e1e5e8;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 25px;
+      text-align: center;
+      color: #61717c;
+    }
+
+    .gallery-image strong {
+      color: var(--primary);
+    }
+
+    .gallery-image img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      display: block;
+    }
+
+
+    /* =========================
+       CARD CONTENT
+    ========================= */
+
+    .gallery-content {
+      padding: 22px;
+    }
+
+    .gallery-content h3 {
+      color: var(--primary);
+      margin: 0 0 10px;
+      font-size: 20px;
+    }
+
+    .gallery-content p {
+      color: #555;
+      margin: 0;
+      font-size: 15px;
+    }
+
+    .gallery-tag {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 5px 10px;
+      border-radius: 20px;
+      background: var(--light-bg);
+      border: 1px solid var(--secondary);
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+
+    /* =========================
+       NOTE
+    ========================= */
+
+    .note {
+      margin-top: 55px;
+      background: white;
+      border-left: 5px solid var(--secondary);
+      padding: 22px 25px;
+      border-radius: 6px;
+    }
+
+    .note strong {
+      color: var(--primary);
+    }
+
+    .note p {
+      margin-bottom: 0;
+      color: #555;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: var(--primary);
+      color: #e4edf2;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 4px;
+    }
+
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 950px) {
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+      }
+
+      .nav-links a {
+        margin: 2px;
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .page-hero {
+        min-height: 280px;
+        padding: 45px 25px;
+        background-position: 65% center;
+      }
+
+      .page-hero h1 {
+        font-size: 36px;
+      }
+
+      .page-hero p {
+        font-size: 16px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      .gallery-card {
+        transition: none;
+      }
+    }
+
+  </style>
 
 </head>
 
@@ -261,215 +385,382 @@ footer p {
 <body>
 
 
-<nav>
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
 
-  <div class="nav-container">
+  <nav>
 
- <div class="nav-links">
+    <div class="nav-container">
 
-  <a href="index.html">Home</a>
-  <a href="index.html#research">Research</a>
-  <a href="index.html#projects">Projects</a>
-  <a href="index.html#publications">Publications</a>
-  <a href="visual-immunology.html">Visual Immunology</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="cv.html">CV</a>
-  <a href="blog.html">Blog</a>
-  <a href="index.html#contact">Contact</a>
+      <div class="nav-links">
 
-</div>
+        <a href="index.html">Home</a>
 
-</nav>
+        <a href="index.html#research">Research</a>
 
+        <a href="index.html#projects">Projects</a>
 
+        <a href="index.html#publications">Publications</a>
 
-<header class="page-header">
+        <a href="visual-immunology.html">Visual Immunology</a>
 
-<h1>Scientific & Research Gallery</h1>
-  
+        <a href="gallery.html">Gallery</a>
 
-  <p>
-    Selected moments from scientific presentations, conferences,
-    research activities, and visual scientific communication.
-  </p>
+        <a href="cv.html">CV</a>
 
-</header>
+        <a href="blog.html">Blog</a>
 
-
-
-<main>
-
-
-<!-- PRESENTATIONS -->
-
-<section class="gallery-section">
-
-  <h2>Presentations & Conferences</h2>
-
-  <p class="section-description">
-    Selected photographs from scientific conferences, poster presentations,
-    research symposia, workshops, and other professional activities.
-  </p>
-
-
-  <div class="gallery-grid">
-
-
-    <div class="gallery-item">
-
-      <div class="placeholder">
-        Conference presentation photo
-      </div>
-
-      <div class="gallery-caption">
-
-        <h3>Conference Presentation</h3>
-
-        <p>
-          Scientific presentation or conference details will be added here.
-        </p>
+        <a href="index.html#contact">Contact</a>
 
       </div>
 
     </div>
 
+  </nav>
 
 
-    <div class="gallery-item">
+  <!-- =========================
+       SCIENTIFIC HERO BANNER
+  ========================= -->
 
-      <div class="placeholder">
-        Poster presentation photo
+  <section class="page-hero">
+
+    <div class="page-hero-content">
+
+      <div class="page-hero-eyebrow">
+        RESEARCH • PRESENTATIONS • SCIENTIFIC COMMUNICATION
       </div>
 
-      <div class="gallery-caption">
+      <h1>Scientific &amp; Research Gallery</h1>
 
-        <h3>Poster Presentation</h3>
+      <p>
+        Selected moments from scientific presentations, conferences,
+        research activities, experimental imaging, and visual scientific
+        communication.
+      </p>
 
-        <p>
-          Poster title, meeting, location, and year can be added here.
-        </p>
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       MAIN CONTENT
+  ========================= -->
+
+  <main>
+
+
+    <section class="intro">
+
+      <h2>Research in Images</h2>
+
+      <p>
+        A visual collection highlighting scientific communication,
+        experimental research, conference participation, and the development
+        of scientific illustrations and research concepts.
+      </p>
+
+    </section>
+
+
+    <!-- =========================
+         PRESENTATIONS & CONFERENCES
+    ========================= -->
+
+    <section class="gallery-section">
+
+      <h2>Presentations &amp; Conferences</h2>
+
+      <p class="section-description">
+        Selected moments from scientific meetings, research presentations,
+        poster sessions, seminars, and professional scientific activities.
+      </p>
+
+      <div class="gallery-grid">
+
+
+        <article class="gallery-card">
+
+          <div class="gallery-image">
+            <strong>Presentation Image</strong>
+          </div>
+
+          <div class="gallery-content">
+
+            <h3>Scientific Presentations</h3>
+
+            <p>
+              Selected oral presentations, seminars, and research talks
+              communicating findings in immunology and autoimmune disease.
+            </p>
+
+            <span class="gallery-tag">Presentations</span>
+
+          </div>
+
+        </article>
+
+
+        <article class="gallery-card">
+
+          <div class="gallery-image">
+            <strong>Conference Image</strong>
+          </div>
+
+          <div class="gallery-content">
+
+            <h3>Scientific Conferences</h3>
+
+            <p>
+              Participation in scientific meetings, conferences, and
+              collaborative research events.
+            </p>
+
+            <span class="gallery-tag">Conferences</span>
+
+          </div>
+
+        </article>
+
+
+        <article class="gallery-card">
+
+          <div class="gallery-image">
+            <strong>Poster Image</strong>
+          </div>
+
+          <div class="gallery-content">
+
+            <h3>Poster Presentations</h3>
+
+            <p>
+              Scientific posters communicating experimental findings,
+              research concepts, and translational perspectives.
+            </p>
+
+            <span class="gallery-tag">Posters</span>
+
+          </div>
+
+        </article>
+
 
       </div>
+
+    </section>
+
+
+    <!-- =========================
+         SCIENTIFIC & RESEARCH IMAGES
+    ========================= -->
+
+    <section class="gallery-section">
+
+      <h2>Scientific &amp; Research Images</h2>
+
+      <p class="section-description">
+        Selected experimental and scientific images illustrating
+        immunological research, in vivo models, cellular biology,
+        and laboratory techniques.
+      </p>
+
+      <div class="gallery-grid">
+
+
+        <article class="gallery-card">
+
+          <div class="gallery-image">
+            <strong>Experimental Image</strong>
+          </div>
+
+          <div class="gallery-content">
+
+            <h3>Experimental Immunology</h3>
+
+            <p>
+              Images representing experimental approaches used to investigate
+              immune-cell biology, tolerance, and autoimmune disease.
+            </p>
+
+            <span class="gallery-tag">Immunology</span>
+
+          </div>
+
+        </article>
+
+
+        <article class="gallery-card">
+
+          <div class="gallery-image">
+            <strong>Microscopy / Islet Image</strong>
+          </div>
+
+          <div class="gallery-content">
+
+            <h3>Cellular &amp; Tissue Imaging</h3>
+
+            <p>
+              Selected cellular, tissue, pancreatic islet, and experimental
+              images used for scientific communication and education.
+            </p>
+
+            <span class="gallery-tag">Imaging</span>
+
+          </div>
+
+        </article>
+
+
+        <article class="gallery-card">
+
+          <div class="gallery-image">
+            <strong>In Vivo Research Image</strong>
+          </div>
+
+          <div class="gallery-content">
+
+            <h3>In Vivo Research</h3>
+
+            <p>
+              Visual documentation of small-animal research approaches,
+              experimental models, and advanced in vivo techniques.
+            </p>
+
+            <span class="gallery-tag">In Vivo Models</span>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SCIENTIFIC ILLUSTRATIONS
+    ========================= -->
+
+    <section class="gallery-section">
+
+      <h2>Scientific Illustrations</h2>
+
+      <p class="section-description">
+        Scientific figures and conceptual illustrations designed to
+        communicate complex immunological mechanisms, experimental workflows,
+        and disease processes.
+      </p>
+
+      <div class="gallery-grid">
+
+
+        <article class="gallery-card">
+
+          <div class="gallery-image">
+            <strong>Immunology Illustration</strong>
+          </div>
+
+          <div class="gallery-content">
+
+            <h3>Immune Mechanisms</h3>
+
+            <p>
+              Visual explanations of immune-cell interactions, signaling,
+              immune tolerance, and mechanisms of immune dysregulation.
+            </p>
+
+            <span class="gallery-tag">Immunology</span>
+
+          </div>
+
+        </article>
+
+
+        <article class="gallery-card">
+
+          <div class="gallery-image">
+            <strong>T1D Illustration</strong>
+          </div>
+
+          <div class="gallery-content">
+
+            <h3>Autoimmunity &amp; Type 1 Diabetes</h3>
+
+            <p>
+              Conceptual figures illustrating B-cell tolerance,
+              Type I interferon signaling, immunometabolism, and
+              Type 1 diabetes progression.
+            </p>
+
+            <span class="gallery-tag">Type 1 Diabetes</span>
+
+          </div>
+
+        </article>
+
+
+        <article class="gallery-card">
+
+          <div class="gallery-image">
+            <strong>Workflow Illustration</strong>
+          </div>
+
+          <div class="gallery-content">
+
+            <h3>Research Workflows</h3>
+
+            <p>
+              Visual representations of experimental and computational
+              workflows connecting laboratory research with modern
+              data-analysis approaches.
+            </p>
+
+            <span class="gallery-tag">Scientific Visualization</span>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PUBLIC CONTENT NOTE
+    ========================= -->
+
+    <div class="note">
+
+      <strong>Scientific &amp; Educational Gallery</strong>
+
+      <p>
+        Images presented in this gallery are intended for scientific
+        communication, education, and professional portfolio purposes.
+        Only appropriately shareable research materials should be displayed.
+      </p>
 
     </div>
 
 
-
-    <div class="gallery-item">
-
-      <div class="placeholder">
-        Symposium or workshop photo
-      </div>
-
-      <div class="gallery-caption">
-
-        <h3>Scientific Symposium</h3>
-
-        <p>
-          Symposium, workshop, or scientific meeting details.
-        </p>
-
-      </div>
-
-    </div>
+  </main>
 
 
-  </div>
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
-</section>
+  <footer>
 
+    <p>© 2026 Mebrahtu G. Tedla</p>
 
+    <p>Scientific &amp; Research Gallery</p>
 
-<!-- SCIENTIFIC ILLUSTRATIONS -->
-
-<section class="gallery-section">
-
-  <h2>Scientific Illustrations</h2>
-
-  <p class="section-description">
-    Selected scientific illustrations, graphical abstracts,
-    pathway diagrams, and research schematics.
-  </p>
-
-
-  <div class="gallery-grid">
-
-
-    <div class="gallery-item">
-
-      <div class="placeholder">
-        Type 1 diabetes illustration
-      </div>
-
-      <div class="gallery-caption">
-
-        <h3>Type 1 Diabetes</h3>
-
-        <p>
-          Illustrations related to autoimmune diabetes and disease progression.
-        </p>
-
-      </div>
-
-    </div>
-
-
-
-    <div class="gallery-item">
-
-      <div class="placeholder">
-        Immunology pathway figure
-      </div>
-
-      <div class="gallery-caption">
-
-        <h3>Immune Signaling</h3>
-
-        <p>
-          Scientific pathways and immune-cell signaling illustrations.
-        </p>
-
-      </div>
-
-    </div>
-
-
-
-    <div class="gallery-item">
-
-      <div class="placeholder">
-        Research schematic
-      </div>
-
-      <div class="gallery-caption">
-
-        <h3>Research Schematics</h3>
-
-        <p>
-          Graphical models and conceptual research illustrations.
-        </p>
-
-      </div>
-
-    </div>
-
-
-  </div>
-
-</section>
-
-
-</main>
-
-
-
-<footer>
-
-  <p>© 2026 Mebrahtu G. Tedla</p>
-
-<p>Scientific & Professional Gallery</p>
-
-</footer>
+  </footer>
 
 
 </body>
