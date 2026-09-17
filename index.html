@@ -1005,6 +1005,75 @@ url("hero-background.png.png");
     font-size: 36px;
   }
 }
+  /* =========================
+   HOMEPAGE HERO TEXT ANIMATION
+========================= */
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Start hidden */
+
+.hero-eyebrow,
+.hero-new h1,
+.hero-new-title,
+.hero-new p {
+  opacity: 0;
+}
+
+
+/* 1. Small heading */
+
+.hero-eyebrow {
+  animation: heroFadeUp 0.7s ease-out 0.15s forwards;
+}
+
+
+/* 2. Name */
+
+.hero-new h1 {
+  animation: heroFadeUp 0.8s ease-out 0.35s forwards;
+}
+
+
+/* 3. Professional title */
+
+.hero-new-title {
+  animation: heroFadeUp 0.8s ease-out 0.55s forwards;
+}
+
+
+/* 4. Research description */
+
+.hero-new p {
+  animation: heroFadeUp 0.8s ease-out 0.75s forwards;
+}
+
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero-eyebrow,
+  .hero-new h1,
+  .hero-new-title,
+  .hero-new p {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+}
 </style>
 
 </head>
