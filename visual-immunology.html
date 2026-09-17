@@ -10,7 +10,73 @@
 
   <meta name="description"
         content="Visual and computational immunology resources, scientific visualizations, bioinformatics demonstrations, and educational tutorials by Mebrahtu G. Tedla.">
+/* =========================
+   SECONDARY PAGE HERO
+========================= */
 
+.page-hero {
+  min-height: 330px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 35, 57, 0.94) 0%,
+      rgba(18, 59, 93, 0.78) 48%,
+      rgba(18, 59, 93, 0.25) 100%
+    ),
+    url("hero-background.png.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  padding: 55px 8%;
+}
+
+.page-hero-content {
+  max-width: 850px;
+}
+
+.page-hero-eyebrow {
+  color: #8FD3D8;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.page-hero h1 {
+  color: white;
+  font-size: clamp(36px, 4.5vw, 54px);
+  line-height: 1.1;
+  margin: 0 0 18px;
+}
+
+.page-hero p {
+  color: rgba(255,255,255,0.94);
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 720px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    min-height: 280px;
+    padding: 45px 25px;
+    background-position: 65% center;
+  }
+
+  .page-hero h1 {
+    font-size: 36px;
+  }
+
+  .page-hero p {
+    font-size: 16px;
+  }
+}
   <style>
 
     :root {
