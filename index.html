@@ -891,6 +891,69 @@ url("hero-background.png.png");
     font-size: 16px;
   }
 }
+  /* =========================
+   HOMEPAGE QUICK LINKS
+========================= */
+
+.hero-actions {
+  background: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+
+  padding: 24px 25px;
+
+  border-bottom: 1px solid #e2e8ec;
+}
+
+.hero-actions a {
+  min-width: 190px;
+
+  background: white;
+  color: #123B5D;
+
+  border: 2px solid #1F7A8C;
+  border-radius: 7px;
+
+  padding: 12px 22px;
+
+  text-align: center;
+  text-decoration: none;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.hero-actions a:hover {
+  background: #1F7A8C;
+  color: white;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 6px 16px rgba(18, 59, 93, 0.16);
+}
+
+@media (max-width: 700px) {
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-actions a {
+    width: 100%;
+    max-width: 320px;
+  }
+
+}
 </style>
 
 </head>
@@ -958,26 +1021,20 @@ url("hero-background.png.png");
       experimental, translational, and computational approaches.
     </p>
 
-    <div class="hero-new-buttons">
-
-      <a class="hero-primary-button" href="#research">
-        Explore Research
-      </a>
-
-      <a class="hero-secondary-button" href="#publications">
-        Publications
-      </a>
-
-      <a class="hero-secondary-button" href="cv.html">
-        View CV
-      </a>
-
-    </div>
-
-  </div>
+  
 
 </section>
+<!-- HOMEPAGE QUICK LINKS -->
 
+<section class="hero-actions">
+
+  <a href="#research">Explore Research</a>
+
+  <a href="#publications">Publications</a>
+
+  <a href="cv.html">View CV</a>
+
+</section>
 
 <main>
 
