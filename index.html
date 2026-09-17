@@ -1071,6 +1071,32 @@ url("hero-background.png.png");
   }
 
 }
+  /* SLOW SECTION BANNER ANIMATION */
+
+.section-banner h2 {
+  opacity: 0;
+  animation: sectionSlowMove 2.8s ease-out 0.25s forwards;
+}
+
+@keyframes sectionSlowMove {
+  0% {
+    opacity: 0;
+    transform: translateX(-45px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-banner h2 {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
 </style>
 
 </head>
