@@ -12,111 +12,228 @@
 
   <style>
 
+    :root {
+      --primary: #123B5D;
+      --secondary: #1F7A8C;
+      --accent: #2A9D8F;
+      --light-bg: #F4F8FB;
+      --text: #222222;
+    }
+
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      color: #222;
+      color: var(--text);
       background: #f5f7f9;
       line-height: 1.7;
     }
 
-nav {
-  background: #123B5D;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
 
-.nav-container {
-  max-width: 1500px;
-  margin: auto;
-  padding: 16px 30px;
-}
+    /* =========================
+       NAVIGATION
+    ========================= */
 
-.nav-links {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 6px;
-  white-space: nowrap;
-  transition: background 0.25s ease;
-}
-
-.nav-links a:hover {
-  background: #1F7A8C;
-}
-
-    .blog-header {
-      background: white;
-      padding: 70px 24px;
-      text-align: center;
-      border-bottom: 1px solid #ddd;
+    nav {
+      background: rgba(18, 59, 93, 0.96);
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
     }
-    .blog-header h1 {
-      font-size: 42px;
-      margin: 0 0 12px;
-    }
-    .blog-header p {
-      max-width: 750px;
+
+    .nav-container {
+      max-width: 1500px;
       margin: auto;
-      color: #555;
-      font-size: 18px;
+      padding: 16px 30px;
     }
+
+    .nav-links {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      white-space: nowrap;
+      transition: background 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      background: var(--secondary);
+      color: white;
+    }
+
+
+    /* =========================
+       SCIENTIFIC HERO BANNER
+    ========================= */
+
+    .page-hero {
+      min-height: 330px;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(8, 35, 57, 0.94) 0%,
+          rgba(18, 59, 93, 0.78) 48%,
+          rgba(18, 59, 93, 0.25) 100%
+        ),
+        url("hero-background.png.png");
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      display: flex;
+      align-items: center;
+      padding: 55px 8%;
+    }
+
+    .page-hero-content {
+      width: 100%;
+      max-width: 850px;
+    }
+
+    .page-hero-eyebrow {
+      color: #8FD3D8;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 14px;
+    }
+
+    .page-hero h1 {
+      color: white;
+      font-size: clamp(38px, 4.5vw, 54px);
+      line-height: 1.1;
+      margin: 0 0 18px;
+      font-weight: 700;
+    }
+
+    .page-hero p {
+      color: rgba(255,255,255,0.94);
+      font-size: 18px;
+      line-height: 1.7;
+      max-width: 760px;
+      margin: 0;
+    }
+
+
+    /* =========================
+       MAIN CONTENT
+    ========================= */
+
     main {
       max-width: 950px;
       margin: auto;
       padding: 50px 24px;
     }
 
+
+    /* =========================
+       ABOUT BLOG
+    ========================= */
+
     .intro {
-      margin-bottom: 45px;
+      margin-bottom: 40px;
     }
+
+    .intro h2 {
+      color: var(--primary);
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .intro h2::after {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: var(--secondary);
+      margin-top: 8px;
+    }
+
+    .intro p {
+      color: #555;
+      font-size: 16px;
+    }
+
+
+    /* =========================
+       CATEGORIES
+    ========================= */
 
     .categories {
       margin: 25px 0 45px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
     }
 
     .category {
       display: inline-block;
       background: white;
-      border: 1px solid #ddd;
+      border: 1px solid var(--secondary);
+      color: var(--primary);
       padding: 7px 12px;
-      margin: 4px;
       border-radius: 20px;
       font-size: 14px;
+      font-weight: 600;
     }
+
+
+    /* =========================
+       BLOG POSTS
+    ========================= */
 
     .post {
       background: white;
       border: 1px solid #e2e2e2;
-      border-radius: 8px;
+      border-radius: 10px;
       padding: 28px;
       margin-bottom: 25px;
+
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .post:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 22px rgba(18,59,93,0.10);
+      border-color: var(--secondary);
     }
 
     .post-category {
       font-size: 13px;
-      font-weight: bold;
-      color: #666;
+      font-weight: 700;
+      color: var(--secondary);
       text-transform: uppercase;
       letter-spacing: 1px;
     }
 
     .post h2 {
+      color: var(--primary);
       margin: 8px 0 5px;
       font-size: 26px;
+      line-height: 1.35;
     }
 
     .post-date {
@@ -125,51 +242,92 @@ nav {
       margin-bottom: 15px;
     }
 
+    .post p {
+      color: #555;
+    }
+
     .read-more {
       display: inline-block;
       margin-top: 10px;
       text-decoration: none;
-      font-weight: bold;
-      color: #222;
+      font-weight: 700;
+      color: var(--secondary);
     }
 
     .read-more:hover {
+      color: var(--primary);
       text-decoration: underline;
     }
 
+
+    /* =========================
+       NOTE
+    ========================= */
+
     .note {
-      background: #eef1f3;
-      border-left: 4px solid #555;
-      padding: 20px;
+      background: white;
+      border-left: 5px solid var(--secondary);
+      padding: 20px 24px;
       margin-top: 45px;
+      border-radius: 6px;
     }
 
+    .note strong {
+      color: var(--primary);
+    }
+
+    .note p {
+      color: #555;
+      margin-bottom: 0;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
     footer {
-      background: #222;
-      color: #ddd;
+      background: var(--primary);
+      color: #e4edf2;
       text-align: center;
       padding: 30px;
       margin-top: 40px;
     }
 
-    @media (max-width: 700px) {
+    footer p {
+      margin: 4px;
+    }
 
-      .nav-container {
-        justify-content: center;
-      }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 850px) {
 
       .nav-links {
-        margin-top: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
       }
 
       .nav-links a {
-        margin: 0 7px;
+        margin: 2px;
       }
 
-      .blog-header h1 {
-        font-size: 34px;
+      .page-hero {
+        min-height: 280px;
+        padding: 45px 25px;
+        background-position: 65% center;
       }
 
+      .page-hero h1 {
+        font-size: 36px;
+      }
+
+      .page-hero p {
+        font-size: 16px;
+      }
     }
 
   </style>
@@ -180,235 +338,235 @@ nav {
 <body>
 
 
-<nav>
+  <!-- NAVIGATION -->
 
-  <div class="nav-container">
+  <nav>
 
-    <div class="nav-links">
+    <div class="nav-container">
 
-  <a href="index.html">Home</a>
-  <a href="index.html#research">Research</a>
-  <a href="index.html#projects">Projects</a>
-  <a href="index.html#publications">Publications</a>
-  <a href="visual-immunology.html">Visual Immunology</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="cv.html">CV</a>
-  <a href="blog.html">Blog</a>
-  <a href="index.html#contact">Contact</a>
+      <div class="nav-links">
 
-</div>
+        <a href="index.html">Home</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#publications">Publications</a>
+        <a href="visual-immunology.html">Visual Immunology</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="cv.html">CV</a>
+        <a href="blog.html">Blog</a>
+        <a href="index.html#contact">Contact</a>
 
-  
+      </div>
 
-</nav>
-
-
-
-<header class="blog-header">
-
-  <h1>Scientific Perspectives</h1>
-
-  <p>
-    Thoughts and perspectives on immunology, autoimmune disease,
-    translational science, immunometabolism, systems biology,
-    computational approaches, and emerging biomedical research.
-  </p>
-
-</header>
-
-
-
-<main>
-
-
-<section class="intro">
-
-  <h2>About This Blog</h2>
-
-  <p>
-    This space provides short scientific perspectives on research
-    questions, emerging concepts, methods, and developments that
-    interest me as an immunologist.
-  </p>
-
-  <p>
-    The views presented here are intended for scientific discussion
-    and education and do not necessarily represent the views of my
-    institution or collaborators.
-  </p>
-
-</section>
-
-
-
-<section class="categories">
-
-  <span class="category">Immunology</span>
-
-  <span class="category">Autoimmunity</span>
-
-  <span class="category">Type 1 Diabetes</span>
-
-  <span class="category">Immunometabolism</span>
-
-  <span class="category">Translational Science</span>
-
-  <span class="category">Systems Immunology</span>
-
-  <span class="category">Computational Approaches</span>
-
-  <span class="category">Precision Medicine</span>
-
-</section>
-
-
-
-<section>
-
-
-  <article class="post">
-
-    <div class="post-category">
-      Immunology • Type 1 Diabetes
     </div>
 
-    <h2>
-      Type I Interferons and B-cell Tolerance in Type 1 Diabetes
-    </h2>
+  </nav>
 
-    <div class="post-date">
-      Coming Soon
+
+  <!-- SCIENTIFIC BLOG HERO -->
+
+  <section class="page-hero">
+
+    <div class="page-hero-content">
+
+      <div class="page-hero-eyebrow">
+        IMMUNOLOGY • TRANSLATIONAL SCIENCE • SCIENTIFIC PERSPECTIVES
+      </div>
+
+      <h1>Scientific Perspectives</h1>
+
+      <p>
+        Thoughts and perspectives on immunology, autoimmune disease,
+        translational science, immunometabolism, systems biology,
+        computational approaches, and emerging biomedical research.
+      </p>
+
     </div>
 
-    <p>
-      A perspective on how Type I interferon signaling may influence
-      B-cell activation, metabolic programming, immune tolerance,
-      and the early development of Type 1 diabetes.
-    </p>
-
-    <a class="read-more" href="#">
-      Read More →
-    </a>
-
-  </article>
+  </section>
 
 
+  <main>
 
-  <article class="post">
 
-    <div class="post-category">
-      Immunometabolism
+    <!-- ABOUT -->
+
+    <section class="intro">
+
+      <h2>About This Blog</h2>
+
+      <p>
+        This space provides short scientific perspectives on research
+        questions, emerging concepts, methods, and developments that
+        interest me as an immunologist.
+      </p>
+
+      <p>
+        The views presented here are intended for scientific discussion
+        and education and do not necessarily represent the views of my
+        institution or collaborators.
+      </p>
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+
+    <section class="categories">
+
+      <span class="category">Immunology</span>
+      <span class="category">Autoimmunity</span>
+      <span class="category">Type 1 Diabetes</span>
+      <span class="category">Immunometabolism</span>
+      <span class="category">Translational Science</span>
+      <span class="category">Systems Immunology</span>
+      <span class="category">Computational Approaches</span>
+      <span class="category">Precision Medicine</span>
+
+    </section>
+
+
+    <!-- BLOG POSTS -->
+
+    <section>
+
+
+      <article class="post">
+
+        <div class="post-category">
+          Immunology • Type 1 Diabetes
+        </div>
+
+        <h2>
+          Type I Interferons and B-cell Tolerance in Type 1 Diabetes
+        </h2>
+
+        <div class="post-date">
+          Coming Soon
+        </div>
+
+        <p>
+          A perspective on how Type I interferon signaling may influence
+          B-cell activation, metabolic programming, immune tolerance,
+          and the early development of Type 1 diabetes.
+        </p>
+
+        <a class="read-more" href="#">
+          Read More →
+        </a>
+
+      </article>
+
+
+      <article class="post">
+
+        <div class="post-category">
+          Immunometabolism
+        </div>
+
+        <h2>
+          Why Immunometabolism Matters in Autoimmune Disease
+        </h2>
+
+        <div class="post-date">
+          Coming Soon
+        </div>
+
+        <p>
+          Exploring how changes in glucose utilization, mitochondrial
+          metabolism, and cellular energetic demands can influence
+          immune-cell activation and autoimmune responses.
+        </p>
+
+        <a class="read-more" href="#">
+          Read More →
+        </a>
+
+      </article>
+
+
+      <article class="post">
+
+        <div class="post-category">
+          Systems Immunology
+        </div>
+
+        <h2>
+          Connecting Experimental and Computational Immunology
+        </h2>
+
+        <div class="post-date">
+          Coming Soon
+        </div>
+
+        <p>
+          Modern immunology increasingly combines experimental models
+          with transcriptomics, single-cell technologies, bioinformatics,
+          and computational analysis to understand complex immune systems.
+        </p>
+
+        <a class="read-more" href="#">
+          Read More →
+        </a>
+
+      </article>
+
+
+      <article class="post">
+
+        <div class="post-category">
+          Precision Medicine
+        </div>
+
+        <h2>
+          Finding Early Immune Biomarkers Before Autoimmune Disease
+        </h2>
+
+        <div class="post-date">
+          Coming Soon
+        </div>
+
+        <p>
+          A discussion of how immune, transcriptional, metabolic,
+          and multi-omics signatures could improve our understanding
+          of disease risk and early progression.
+        </p>
+
+        <a class="read-more" href="#">
+          Read More →
+        </a>
+
+      </article>
+
+
+    </section>
+
+
+    <!-- NOTE -->
+
+    <div class="note">
+
+      <strong>Scientific Blog</strong>
+
+      <p>
+        New articles and research perspectives will be added periodically.
+        Posts represent personal scientific perspectives and are not
+        substitutes for peer-reviewed publications.
+      </p>
+
     </div>
 
-    <h2>
-      Why Immunometabolism Matters in Autoimmune Disease
-    </h2>
 
-    <div class="post-date">
-      Coming Soon
-    </div>
-
-    <p>
-      Exploring how changes in glucose utilization, mitochondrial
-      metabolism, and cellular energetic demands can influence
-      immune-cell activation and autoimmune responses.
-    </p>
-
-    <a class="read-more" href="#">
-      Read More →
-    </a>
-
-  </article>
+  </main>
 
 
+  <footer>
 
-  <article class="post">
+    <p>© 2026 Mebrahtu G. Tedla</p>
 
-    <div class="post-category">
-      Systems Immunology
-    </div>
+    <p>Scientific Perspectives</p>
 
-    <h2>
-      Connecting Experimental and Computational Immunology
-    </h2>
-
-    <div class="post-date">
-      Coming Soon
-    </div>
-
-    <p>
-      Modern immunology increasingly combines experimental models
-      with transcriptomics, single-cell technologies, bioinformatics,
-      and computational analysis to understand complex immune systems.
-    </p>
-
-    <a class="read-more" href="#">
-      Read More →
-    </a>
-
-  </article>
-
-
-
-  <article class="post">
-
-    <div class="post-category">
-      Precision Medicine
-    </div>
-
-    <h2>
-      Finding Early Immune Biomarkers Before Autoimmune Disease
-    </h2>
-
-    <div class="post-date">
-      Coming Soon
-    </div>
-
-    <p>
-      A discussion of how immune, transcriptional, metabolic,
-      and multi-omics signatures could improve our understanding
-      of disease risk and early progression.
-    </p>
-
-    <a class="read-more" href="#">
-      Read More →
-    </a>
-
-  </article>
-
-
-</section>
-
-
-
-<div class="note">
-
-  <strong>Scientific Blog</strong>
-
-  <p>
-    New articles and research perspectives will be added periodically.
-    Posts represent personal scientific perspectives and are not
-    substitutes for peer-reviewed publications.
-  </p>
-
-</div>
-
-
-</main>
-
-
-
-<footer>
-
-  <p>
-    © 2026 Mebrahtu G. Tedla
-  </p>
-
-  <p>
-    Scientific Perspectives
-  </p>
-
-</footer>
+  </footer>
 
 
 </body>
