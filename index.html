@@ -1097,6 +1097,41 @@ url("hero-background.png.png");
     transform: none;
   }
 }
+  /* =====================================
+   CENTER BANNER TITLE SCROLL ANIMATION
+===================================== */
+
+.section-banner h2 {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+.section-banner h2.banner-visible {
+  animation: bannerTitleMove 3s ease-out forwards;
+}
+
+@keyframes bannerTitleMove {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-banner h2 {
+    opacity: 1;
+    transform: none;
+  }
+
+  .section-banner h2.banner-visible {
+    animation: none;
+  }
+}
 </style>
 
 </head>
@@ -1727,7 +1762,36 @@ url("hero-background.png.png");
   </p>
 
 </footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
+  const bannerTitles = document.querySelectorAll(".section-banner h2");
+
+  const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach((entry) => {
+
+      if (entry.isIntersecting) {
+
+        entry.target.classList.remove("banner-visible");
+
+        void entry.target.offsetWidth;
+
+        entry.target.classList.add("banner-visible");
+      }
+
+    });
+
+  }, {
+    threshold: 0.5
+  });
+
+  bannerTitles.forEach((title) => {
+    observer.observe(title);
+  });
+
+});
+</script>
 
 </body>
 
