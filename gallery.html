@@ -2,13 +2,16 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Scientific &amp; Research Gallery | Mebrahtu G. Tedla</title>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Scientific Perspectives | Mebrahtu G. Tedla</title>
 
   <meta name="description"
-        content="Scientific and research gallery of Mebrahtu G. Tedla featuring presentations, conferences, research activities, experimental images, and scientific illustrations.">
+        content="Scientific perspectives by Mebrahtu G. Tedla on immunology, autoimmunity, Type 1 diabetes, immunometabolism, translational science, systems immunology, and precision medicine.">
 
   <style>
 
@@ -37,13 +40,11 @@
     }
 
 
-    /* =========================
-       NAVIGATION
-    ========================= */
+    /* NAVIGATION */
 
     nav {
-      background: rgba(18, 59, 93, 0.96);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(18,59,93,0.96);
+      border-bottom: 1px solid rgba(255,255,255,0.12);
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -76,13 +77,10 @@
 
     .nav-links a:hover {
       background: var(--secondary);
-      color: white;
     }
 
 
-    /* =========================
-       SCIENTIFIC PAGE HERO
-    ========================= */
+    /* SCIENTIFIC HERO */
 
     .page-hero {
       min-height: 330px;
@@ -90,9 +88,9 @@
       background:
         linear-gradient(
           90deg,
-          rgba(8, 35, 57, 0.94) 0%,
-          rgba(18, 59, 93, 0.78) 48%,
-          rgba(18, 59, 93, 0.25) 100%
+          rgba(8,35,57,0.94) 0%,
+          rgba(18,59,93,0.78) 48%,
+          rgba(18,59,93,0.25) 100%
         ),
         url("hero-background.png.png");
 
@@ -102,11 +100,11 @@
 
       display: flex;
       align-items: center;
+
       padding: 55px 8%;
     }
 
     .page-hero-content {
-      width: 100%;
       max-width: 850px;
     }
 
@@ -120,24 +118,21 @@
 
     .page-hero h1 {
       color: white;
-      font-size: clamp(36px, 4.5vw, 54px);
+      font-size: clamp(38px,4.5vw,54px);
       line-height: 1.1;
       margin: 0 0 18px;
-      font-weight: 700;
     }
 
     .page-hero p {
-      color: rgba(255, 255, 255, 0.94);
+      color: rgba(255,255,255,0.94);
       font-size: 18px;
       line-height: 1.7;
-      max-width: 760px;
+      max-width: 720px;
       margin: 0;
     }
 
 
-    /* =========================
-       MAIN CONTENT
-    ========================= */
+    /* MAIN */
 
     main {
       max-width: 1100px;
@@ -145,16 +140,19 @@
       padding: 55px 24px;
     }
 
+
+    /* INTRO */
+
     .intro {
       max-width: 850px;
-      margin: 0 auto 55px;
+      margin: 0 auto 45px;
       text-align: center;
     }
 
     .intro h2 {
       color: var(--primary);
       font-size: 30px;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
     }
 
     .intro p {
@@ -163,51 +161,40 @@
     }
 
 
-    /* =========================
-       GALLERY SECTIONS
-    ========================= */
+    /* CATEGORIES */
 
-    .gallery-section {
-      margin-bottom: 60px;
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 9px;
+      margin-bottom: 45px;
     }
 
-    .gallery-section h2 {
+    .categories span {
+      background: white;
+      border: 1px solid var(--secondary);
       color: var(--primary);
-      font-size: 29px;
-      margin-bottom: 10px;
-    }
-
-    .gallery-section h2::after {
-      content: "";
-      display: block;
-      width: 55px;
-      height: 4px;
-      background: var(--secondary);
-      margin-top: 8px;
-    }
-
-    .section-description {
-      color: #555;
-      max-width: 850px;
-      margin-bottom: 25px;
+      padding: 7px 13px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
     }
 
 
-    /* =========================
-       GALLERY GRID
-    ========================= */
+    /* BLOG GRID */
 
-    .gallery-grid {
+    .blog-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
     }
 
-    .gallery-card {
+    .blog-card {
       background: white;
       border: 1px solid #e1e5e8;
       border-radius: 12px;
-      overflow: hidden;
+      padding: 28px;
 
       transition:
         transform 0.25s ease,
@@ -215,79 +202,46 @@
         border-color 0.25s ease;
     }
 
-    .gallery-card:hover {
+    .blog-card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.10);
       border-color: var(--secondary);
     }
 
-
-    /* =========================
-       IMAGE PLACEHOLDERS
-    ========================= */
-
-    .gallery-image {
-      min-height: 210px;
-      background: var(--light-bg);
-      border-bottom: 1px solid #e1e5e8;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      padding: 25px;
-      text-align: center;
-      color: #61717c;
-    }
-
-    .gallery-image strong {
-      color: var(--primary);
-    }
-
-    .gallery-image img {
-      width: 100%;
-      height: 230px;
-      object-fit: cover;
-      display: block;
-    }
-
-
-    /* =========================
-       CARD CONTENT
-    ========================= */
-
-    .gallery-content {
-      padding: 22px;
-    }
-
-    .gallery-content h3 {
-      color: var(--primary);
-      margin: 0 0 10px;
-      font-size: 20px;
-    }
-
-    .gallery-content p {
-      color: #555;
-      margin: 0;
-      font-size: 15px;
-    }
-
-    .gallery-tag {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 5px 10px;
-      border-radius: 20px;
-      background: var(--light-bg);
-      border: 1px solid var(--secondary);
-      color: var(--primary);
+    .blog-category {
+      color: var(--secondary);
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .blog-card h2 {
+      color: var(--primary);
+      font-size: 23px;
+      line-height: 1.35;
+      margin: 10px 0 12px;
+    }
+
+    .blog-card p {
+      color: #555;
+    }
+
+    .read-more {
+      display: inline-block;
+      margin-top: 10px;
+      color: var(--secondary);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .read-more:hover {
+      color: var(--primary);
+      text-decoration: underline;
     }
 
 
-    /* =========================
-       NOTE
-    ========================= */
+    /* NOTE */
 
     .note {
       margin-top: 55px;
@@ -302,14 +256,12 @@
     }
 
     .note p {
-      margin-bottom: 0;
       color: #555;
+      margin-bottom: 0;
     }
 
 
-    /* =========================
-       FOOTER
-    ========================= */
+    /* FOOTER */
 
     footer {
       background: var(--primary);
@@ -324,15 +276,9 @@
     }
 
 
-    /* =========================
-       RESPONSIVE
-    ========================= */
+    /* MOBILE */
 
-    @media (max-width: 950px) {
-
-      .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+    @media (max-width: 850px) {
 
       .nav-links {
         justify-content: center;
@@ -340,14 +286,7 @@
         gap: 5px;
       }
 
-      .nav-links a {
-        margin: 2px;
-      }
-    }
-
-    @media (max-width: 650px) {
-
-      .gallery-grid {
+      .blog-grid {
         grid-template-columns: 1fr;
       }
 
@@ -366,17 +305,6 @@
       }
     }
 
-    @media (prefers-reduced-motion: reduce) {
-
-      html {
-        scroll-behavior: auto;
-      }
-
-      .gallery-card {
-        transition: none;
-      }
-    }
-
   </style>
 
 </head>
@@ -385,382 +313,204 @@
 <body>
 
 
-  <!-- =========================
-       NAVIGATION
-  ========================= -->
+<nav>
 
-  <nav>
+  <div class="nav-container">
 
-    <div class="nav-container">
+    <div class="nav-links">
 
-      <div class="nav-links">
-
-        <a href="index.html">Home</a>
-
-        <a href="index.html#research">Research</a>
-
-        <a href="index.html#projects">Projects</a>
-
-        <a href="index.html#publications">Publications</a>
-
-        <a href="visual-immunology.html">Visual Immunology</a>
-
-        <a href="gallery.html">Gallery</a>
-
-        <a href="cv.html">CV</a>
-
-        <a href="blog.html">Blog</a>
-
-        <a href="index.html#contact">Contact</a>
-
-      </div>
+      <a href="index.html">Home</a>
+      <a href="index.html#research">Research</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#publications">Publications</a>
+      <a href="visual-immunology.html">Visual Immunology</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="cv.html">CV</a>
+      <a href="blog.html">Blog</a>
+      <a href="index.html#contact">Contact</a>
 
     </div>
 
-  </nav>
+  </div>
+
+</nav>
 
 
-  <!-- =========================
-       SCIENTIFIC HERO BANNER
-  ========================= -->
+<!-- BLOG HERO -->
 
-  <section class="page-hero">
+<section class="page-hero">
 
-    <div class="page-hero-content">
+  <div class="page-hero-content">
 
-      <div class="page-hero-eyebrow">
-        RESEARCH • PRESENTATIONS • SCIENTIFIC COMMUNICATION
-      </div>
-
-      <h1>Scientific &amp; Research Gallery</h1>
-
-      <p>
-        Selected moments from scientific presentations, conferences,
-        research activities, experimental imaging, and visual scientific
-        communication.
-      </p>
-
+    <div class="page-hero-eyebrow">
+      IMMUNOLOGY • TRANSLATIONAL SCIENCE • SCIENTIFIC PERSPECTIVES
     </div>
+
+    <h1>Scientific Perspectives</h1>
+
+    <p>
+      Perspectives on immunology, autoimmunity, Type 1 diabetes,
+      immunometabolism, translational research, systems immunology,
+      and emerging computational approaches.
+    </p>
+
+  </div>
+
+</section>
+
+
+<main>
+
+
+  <section class="intro">
+
+    <h2>Ideas Across Experimental &amp; Computational Immunology</h2>
+
+    <p>
+      This space explores emerging concepts, research questions,
+      methodological developments, and translational perspectives
+      across modern immunology.
+    </p>
 
   </section>
 
 
-  <!-- =========================
-       MAIN CONTENT
-  ========================= -->
+  <div class="categories">
 
-  <main>
+    <span>Immunology</span>
+    <span>Autoimmunity</span>
+    <span>Type 1 Diabetes</span>
+    <span>Immunometabolism</span>
+    <span>Translational Science</span>
+    <span>Systems Immunology</span>
+    <span>Computational Approaches</span>
+    <span>Precision Medicine</span>
+
+  </div>
 
 
-    <section class="intro">
+  <div class="blog-grid">
 
-      <h2>Research in Images</h2>
+
+    <article class="blog-card">
+
+      <div class="blog-category">
+        Autoimmunity • Type 1 Diabetes
+      </div>
+
+      <h2>
+        Type I Interferons and B-cell Tolerance in Type 1 Diabetes
+      </h2>
 
       <p>
-        A visual collection highlighting scientific communication,
-        experimental research, conference participation, and the development
-        of scientific illustrations and research concepts.
+        Exploring how Type I interferon signaling may influence
+        B-cell activation, immune tolerance, and autoimmune disease
+        progression.
       </p>
 
-    </section>
+      <a class="read-more" href="#">
+        Read More →
+      </a>
+
+    </article>
 
 
-    <!-- =========================
-         PRESENTATIONS & CONFERENCES
-    ========================= -->
+    <article class="blog-card">
 
-    <section class="gallery-section">
-
-      <h2>Presentations &amp; Conferences</h2>
-
-      <p class="section-description">
-        Selected moments from scientific meetings, research presentations,
-        poster sessions, seminars, and professional scientific activities.
-      </p>
-
-      <div class="gallery-grid">
-
-
-        <article class="gallery-card">
-
-          <div class="gallery-image">
-            <strong>Presentation Image</strong>
-          </div>
-
-          <div class="gallery-content">
-
-            <h3>Scientific Presentations</h3>
-
-            <p>
-              Selected oral presentations, seminars, and research talks
-              communicating findings in immunology and autoimmune disease.
-            </p>
-
-            <span class="gallery-tag">Presentations</span>
-
-          </div>
-
-        </article>
-
-
-        <article class="gallery-card">
-
-          <div class="gallery-image">
-            <strong>Conference Image</strong>
-          </div>
-
-          <div class="gallery-content">
-
-            <h3>Scientific Conferences</h3>
-
-            <p>
-              Participation in scientific meetings, conferences, and
-              collaborative research events.
-            </p>
-
-            <span class="gallery-tag">Conferences</span>
-
-          </div>
-
-        </article>
-
-
-        <article class="gallery-card">
-
-          <div class="gallery-image">
-            <strong>Poster Image</strong>
-          </div>
-
-          <div class="gallery-content">
-
-            <h3>Poster Presentations</h3>
-
-            <p>
-              Scientific posters communicating experimental findings,
-              research concepts, and translational perspectives.
-            </p>
-
-            <span class="gallery-tag">Posters</span>
-
-          </div>
-
-        </article>
-
-
+      <div class="blog-category">
+        Immunometabolism
       </div>
 
-    </section>
-
-
-    <!-- =========================
-         SCIENTIFIC & RESEARCH IMAGES
-    ========================= -->
-
-    <section class="gallery-section">
-
-      <h2>Scientific &amp; Research Images</h2>
-
-      <p class="section-description">
-        Selected experimental and scientific images illustrating
-        immunological research, in vivo models, cellular biology,
-        and laboratory techniques.
-      </p>
-
-      <div class="gallery-grid">
-
-
-        <article class="gallery-card">
-
-          <div class="gallery-image">
-            <strong>Experimental Image</strong>
-          </div>
-
-          <div class="gallery-content">
-
-            <h3>Experimental Immunology</h3>
-
-            <p>
-              Images representing experimental approaches used to investigate
-              immune-cell biology, tolerance, and autoimmune disease.
-            </p>
-
-            <span class="gallery-tag">Immunology</span>
-
-          </div>
-
-        </article>
-
-
-        <article class="gallery-card">
-
-          <div class="gallery-image">
-            <strong>Microscopy / Islet Image</strong>
-          </div>
-
-          <div class="gallery-content">
-
-            <h3>Cellular &amp; Tissue Imaging</h3>
-
-            <p>
-              Selected cellular, tissue, pancreatic islet, and experimental
-              images used for scientific communication and education.
-            </p>
-
-            <span class="gallery-tag">Imaging</span>
-
-          </div>
-
-        </article>
-
-
-        <article class="gallery-card">
-
-          <div class="gallery-image">
-            <strong>In Vivo Research Image</strong>
-          </div>
-
-          <div class="gallery-content">
-
-            <h3>In Vivo Research</h3>
-
-            <p>
-              Visual documentation of small-animal research approaches,
-              experimental models, and advanced in vivo techniques.
-            </p>
-
-            <span class="gallery-tag">In Vivo Models</span>
-
-          </div>
-
-        </article>
-
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         SCIENTIFIC ILLUSTRATIONS
-    ========================= -->
-
-    <section class="gallery-section">
-
-      <h2>Scientific Illustrations</h2>
-
-      <p class="section-description">
-        Scientific figures and conceptual illustrations designed to
-        communicate complex immunological mechanisms, experimental workflows,
-        and disease processes.
-      </p>
-
-      <div class="gallery-grid">
-
-
-        <article class="gallery-card">
-
-          <div class="gallery-image">
-            <strong>Immunology Illustration</strong>
-          </div>
-
-          <div class="gallery-content">
-
-            <h3>Immune Mechanisms</h3>
-
-            <p>
-              Visual explanations of immune-cell interactions, signaling,
-              immune tolerance, and mechanisms of immune dysregulation.
-            </p>
-
-            <span class="gallery-tag">Immunology</span>
-
-          </div>
-
-        </article>
-
-
-        <article class="gallery-card">
-
-          <div class="gallery-image">
-            <strong>T1D Illustration</strong>
-          </div>
-
-          <div class="gallery-content">
-
-            <h3>Autoimmunity &amp; Type 1 Diabetes</h3>
-
-            <p>
-              Conceptual figures illustrating B-cell tolerance,
-              Type I interferon signaling, immunometabolism, and
-              Type 1 diabetes progression.
-            </p>
-
-            <span class="gallery-tag">Type 1 Diabetes</span>
-
-          </div>
-
-        </article>
-
-
-        <article class="gallery-card">
-
-          <div class="gallery-image">
-            <strong>Workflow Illustration</strong>
-          </div>
-
-          <div class="gallery-content">
-
-            <h3>Research Workflows</h3>
-
-            <p>
-              Visual representations of experimental and computational
-              workflows connecting laboratory research with modern
-              data-analysis approaches.
-            </p>
-
-            <span class="gallery-tag">Scientific Visualization</span>
-
-          </div>
-
-        </article>
-
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         PUBLIC CONTENT NOTE
-    ========================= -->
-
-    <div class="note">
-
-      <strong>Scientific &amp; Educational Gallery</strong>
+      <h2>
+        Why Immunometabolism Matters in Autoimmune Disease
+      </h2>
 
       <p>
-        Images presented in this gallery are intended for scientific
-        communication, education, and professional portfolio purposes.
-        Only appropriately shareable research materials should be displayed.
+        Immune-cell metabolism is increasingly recognized as a
+        central regulator of activation, differentiation, function,
+        and disease-associated immune responses.
       </p>
 
-    </div>
+      <a class="read-more" href="#">
+        Read More →
+      </a>
+
+    </article>
 
 
-  </main>
+    <article class="blog-card">
+
+      <div class="blog-category">
+        Systems Immunology • Bioinformatics
+      </div>
+
+      <h2>
+        Connecting Experimental and Computational Immunology
+      </h2>
+
+      <p>
+        Integrating experimental immunology with transcriptomics,
+        computational analysis, and systems-level approaches can
+        provide deeper insight into complex immune responses.
+      </p>
+
+      <a class="read-more" href="#">
+        Read More →
+      </a>
+
+    </article>
 
 
-  <!-- =========================
-       FOOTER
-  ========================= -->
+    <article class="blog-card">
 
-  <footer>
+      <div class="blog-category">
+        Translational Science • Precision Medicine
+      </div>
 
-    <p>© 2026 Mebrahtu G. Tedla</p>
+      <h2>
+        Finding Early Immune Biomarkers Before Autoimmune Disease
+      </h2>
 
-    <p>Scientific &amp; Research Gallery</p>
+      <p>
+        Identifying immune signatures that emerge before clinical
+        disease may improve understanding of disease progression
+        and support future approaches to risk stratification.
+      </p>
 
-  </footer>
+      <a class="read-more" href="#">
+        Read More →
+      </a>
+
+    </article>
+
+
+  </div>
+
+
+  <div class="note">
+
+    <strong>Scientific Perspectives</strong>
+
+    <p>
+      Articles and perspectives presented here are intended for
+      scientific communication and education and reflect developing
+      research interests across experimental, translational, and
+      computational immunology.
+    </p>
+
+  </div>
+
+
+</main>
+
+
+<footer>
+
+  <p>© 2026 Mebrahtu G. Tedla</p>
+
+  <p>Scientific Perspectives</p>
+
+</footer>
 
 
 </body>
