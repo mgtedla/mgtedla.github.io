@@ -152,7 +152,28 @@ nav {
     border: 1.5px solid #1F7A8C;
     border-radius: 12px;
 }
+/* ===== MOBILE HERO FIX ===== */
+@media (max-width: 768px) {
 
+  .hero {
+    padding: 24px 16px !important;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .profile-photo {
+    width: 100% !important;
+    height: 320px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+}
 .profile-photo {
     width: 100%;
     height: 500px;
