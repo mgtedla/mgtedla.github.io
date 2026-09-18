@@ -137,7 +137,67 @@ nav {
     background: white;
     padding: 60px 24px;
 }
-  
+  /* =========================================
+   RESEARCH MISSION BANNER — ALL DEVICES
+   ========================================= */
+
+.research-mission {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  padding: 18px 0 !important;
+  margin: 20px 0 !important;
+
+  background: linear-gradient(
+    90deg,
+    rgba(8, 35, 57, 0.94) 0%,
+    rgba(18, 59, 93, 0.76) 50%,
+    rgba(18, 59, 93, 0.25) 100%
+  ) !important;
+
+  border-radius: 10px !important;
+}
+
+.research-mission-text {
+  display: inline-block !important;
+  white-space: nowrap !important;
+
+  color: white !important;
+  font-size: 28px !important;
+  font-weight: 500 !important;
+
+  animation: missionMove 16s linear infinite !important;
+}
+
+@keyframes missionMove {
+  from {
+    transform: translateX(100vw);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* PHONE */
+@media (max-width: 768px) {
+
+  .research-mission {
+    padding: 14px 0 !important;
+
+    /* SAME COLOR AS DESKTOP */
+    background: linear-gradient(
+      90deg,
+      rgba(8, 35, 57, 0.94) 0%,
+      rgba(18, 59, 93, 0.76) 50%,
+      rgba(18, 59, 93, 0.25) 100%
+    ) !important;
+  }
+
+  .research-mission-text {
+    font-size: 18px !important;
+    animation: missionMove 18s linear infinite !important;
+  }
+}
 
 .hero-container {
     max-width: 1200px;
@@ -1288,7 +1348,7 @@ rgba(18, 59, 93, 0.10) 100%
 
 </section>
 
- <div class="research-mission">
+<div class="research-mission">
   <span class="research-mission-text">
     Investigating immune dysregulation, loss of immune tolerance, and mechanisms underlying autoimmune disease progression through experimental, translational, and computational approaches.
   </span>
