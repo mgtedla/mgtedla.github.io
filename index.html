@@ -1161,6 +1161,48 @@ rgba(18, 59, 93, 0.10) 100%
         font-size: 1.1rem;
         line-height: 1.6;
     }
+  .research-mission {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 18px 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(8, 35, 57, 0.94) 0%,
+    rgba(18, 59, 93, 0.76) 50%,
+    rgba(18, 59, 93, 0.25) 100%
+  );
+}
+
+.research-mission-text {
+  display: inline-block;
+  white-space: nowrap;
+  color: white;
+  font-size: 28px;
+  font-weight: 500;
+  animation: missionMove 16s linear infinite;
+}
+
+@keyframes missionMove {
+  from {
+    transform: translateX(100vw);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .research-mission {
+    padding: 12px 0;
+  }
+
+  .research-mission-text {
+    font-size: 18px;
+    animation-duration: 20s;
+  }
+}
 }
 </style>
 
@@ -1225,10 +1267,10 @@ rgba(18, 59, 93, 0.10) 100%
 
 </section>
 
-  <div class="research-mission">
-    Investigating immune dysregulation, loss of immune tolerance,
-    and mechanisms underlying autoimmune disease progression through
-    experimental, translational, and computational approaches.
+ <div class="research-mission">
+  <span class="research-mission-text">
+    Investigating immune dysregulation, loss of immune tolerance, and mechanisms underlying autoimmune disease progression through experimental, translational, and computational approaches.
+  </span>
 </div>
 
   
