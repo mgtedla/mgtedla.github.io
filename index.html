@@ -1289,6 +1289,46 @@ rgba(18, 59, 93, 0.10) 100%
   }
 }
 }
+  /* =========================
+   SOCIAL & ACADEMIC ICONS
+========================= */
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 25px 0;
+  flex-wrap: wrap;
+}
+
+.social-icons span {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1.5px solid var(--secondary);
+  border-radius: 50%;
+
+  background: white;
+  color: var(--primary);
+  font-size: 20px;
+
+  cursor: default;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.social-icons span:hover {
+  transform: translateY(-3px);
+  background: var(--primary);
+  color: white;
+}
 </style>
 
 </head>
@@ -1850,8 +1890,6 @@ rgba(18, 59, 93, 0.10) 100%
 
 <section id="contact">
 
-<section id="contact">
-
   <h2>
     Contact
   </h2>
@@ -1860,7 +1898,38 @@ rgba(18, 59, 93, 0.10) 100%
   <p>
     Email: your-email@example.com
   </p>
+<!-- Social & Academic Profiles -->
+<div class="social-icons">
 
+  <span title="LinkedIn">
+    <i class="fa-brands fa-linkedin-in"></i>
+  </span>
+
+  <span title="ORCID">
+    <i class="fa-brands fa-orcid"></i>
+  </span>
+
+  <span title="YouTube">
+    <i class="fa-brands fa-youtube"></i>
+  </span>
+
+  <span title="X / Twitter">
+    <i class="fa-brands fa-x-twitter"></i>
+  </span>
+
+  <span title="Facebook">
+    <i class="fa-brands fa-facebook-f"></i>
+  </span>
+
+  <span title="GitHub">
+    <i class="fa-brands fa-github"></i>
+  </span>
+
+  <span title="Google Scholar">
+    <i class="fa-solid fa-graduation-cap"></i>
+  </span>
+
+</div>
 
   <p>
 
